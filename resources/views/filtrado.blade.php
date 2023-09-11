@@ -24,6 +24,8 @@
     <!-- Contenido -->
     <main class="page">
       <div class="container">...</div>
+
+      <button type="button" class="btn btn-default">Básico</button>
     </main>
 
     <!-- JS -->
