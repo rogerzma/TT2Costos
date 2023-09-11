@@ -20,3 +20,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/index', function () {return view('index');});
+
+Route::view('/filtrado', 'filtrado');
+Route::view('/ListaCultivos', 'ListaCultivos');
+Route::view('/ActualizaCultivo', 'ActualizaCultivo');
+Route::view('/SubirReportes', 'SubirReportes');
+Route::view('/ActualizaReporte', 'ActualizaReporte');
+Route::view('/RespaldoReportes', 'RespaldoReportes');
