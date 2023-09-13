@@ -10,14 +10,69 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link href="/favicon.ico" rel="shortcut icon">
+    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
     <div id="app">
+
+        <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
+                     <span class="sr-only">Interruptor de Navegación</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"></a>
+                  </div>
+                  <div class="collapse navbar-collapse" id="subenlaces">
+                    <ul class="nav navbar-nav navbar-right">
+                <li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/articulos">Blog</a></li>
+                <li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/multimedia">Multimedia</a></li>
+                <li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/prensa">
+                      Prensa            </a>
+                  </li>
+                  <li class="landing-btn">
+                          <a href="https://www.gob.mx/inifap/archivo/agenda">
+                        Agenda            </a>
+                    </li>
+                <li class="landing-btn">
+                        <a href="https://www.gob.mx/inifap/archivo/acciones_y_programas">
+                      Acciones y programas            </a>
+                  </li>
+                <li class="landing-btn">
+                        <a href="https://www.gob.mx/inifap/archivo/documentos">
+                      Documentos            </a>
+                  </li>
+                  <li class="landing-btn">
+                          <a href="https://vun.inifap.gob.mx/portalweb/_Transparencia">
+                        Transparencia            </a>
+                    </li>
+                <li class="landing-btn">
+                        <a href="https://www.gob.mx/agricultura/es/#344">
+                      Contacto            </a>
+                  </li>
+                  </ul>
+                </div>
+                </div>
+              </nav>
+                  
+      
+              <div class="container">
+                  <ol class="breadcrumb top-buffer">
+                      <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a></li>
+                      <li><a href="http://www.gob.mx/inifap">Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias</a></li>
+                      <li><a href="http://www.gob.mx/inifap">Inifap C.E. Zacatecas</a></li>
+                      <li><a href="http://www.gob.mx/inifap">Agrocostos</a></li>
+                      <li class="active">Iniciar sesión</li>
+                  </ol>
+              </div>
+
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -34,39 +89,6 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
                     </ul>
                 </div>
             </div>
@@ -76,5 +98,9 @@
             @yield('content')
         </main>
     </div>
+    <p>
+    <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+    </p>
+
 </body>
 </html>

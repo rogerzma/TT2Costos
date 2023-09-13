@@ -1,425 +1,401 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
+<html class="no-js" lang="es">
+<head>
+	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Reportes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    
+    <!--NO MODIFICAR-->
+    <title>INIFAP C.E. Zacatecas</title>
+    
+     
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-HXXJYQTXCE"></script>
+		<script>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
 
+  			gtag('config', 'G-HXXJYQTXCE');
+		</script>
+			<link rel='stylesheet' type='text/css' href='https://framework-gb.cdn.gob.mx/assets/styles/main.css'>
+		</head>
 
-    <!-- CSS -->
-    <link href="/favicon.ico" rel="shortcut icon">
-    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
-
-    <!-- Respond.js soporte de media queries para Internet Explorer 8 -->
-    <!-- ie8.js EventTarget para cada nodo en Internet Explorer 8 -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/0.2.2/ie8.js"></script>
-    <![endif]-->
-
-  </head>
-  <body>
-
-    <!-- Contenido -->
-    <main class="page">
-      <div class="container">
-        <hr>
-        <h3>Reportes</h3>
-        <hr class="red">
+<body>
+	<main class="page">
+		
+		<nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
+    	<div class="container">
+        	<div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
+             	<span class="sr-only">Interruptor de Navegación</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/"></a>
+          	</div>
+          	<div class="collapse navbar-collapse" id="subenlaces">
+            	<ul class="nav navbar-nav navbar-right">
+					<li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/articulos">Blog</a></li>
+					<li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/multimedia">Multimedia</a></li>
+					<li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/prensa">
+								Prensa            </a>
+						</li>
+						<li class="landing-btn">
+										<a href="https://www.gob.mx/inifap/archivo/agenda">
+									Agenda            </a>
+							</li>
+					<li class="landing-btn">
+									<a href="https://www.gob.mx/inifap/archivo/acciones_y_programas">
+								Acciones y programas            </a>
+						</li>
+					<li class="landing-btn">
+									<a href="https://www.gob.mx/inifap/archivo/documentos">
+								Documentos            </a>
+						</li>
+						<li class="landing-btn">
+										<a href="https://vun.inifap.gob.mx/portalweb/_Transparencia">
+									Transparencia            </a>
+							</li>
+					<li class="landing-btn">
+									<a href="https://www.gob.mx/agricultura/es/#344">
+								Contacto            </a>
+						</li>
+					  </ul>
+					</div>
+				  </div>
+				</nav>
+		        <!--NO MODIFICAR-->
+        <!--SECCIÓN DINÁMICA PARA DETECCIÓN DE LOCALIZACIÓN A TRAVÉS DE breadcrumb-->
+        <div class="container">
+            <ol class="breadcrumb top-buffer">
+                <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a></li>
+                <li><a href="http://www.gob.mx/inifap">Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias</a></li>
+                <li class="active">Inifap C.E. Zacatecas</li>
+            </ol>
+        </div>
         
-
+    	<div class="container">
         <div class="row">
-          <div class="col-md-6">    
-              <p>
-                <p><h3>Filtrar por cultivo.</h3></p>
-                <div class="btn-group" role="group">
-                  <button id="btnFiltroCultivo" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    Filtro por cultivo
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="btnFiltroCultivo">
-                    <li><a href="#">Frijol</a></li>
-                    <li><a href="#">Maiz</a></li>
-                    <li><a href="#">Chile</a></li>
-                    <li><a href="#">Tomate</a></li>
-                  </ul>
-                </div>
-              </p></div> 
-          <div class="col-md-6">    
-              <p>
-                <p><h3>Filtrar por modalidad.</h3></p>
-                <div class="btn-group" role="group">
-                  <button id="btnFiltroModalidad" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    Filtro por modalidad
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="btnFiltroModalidad">
-                    <li><a href="#">Riego</a></li>
-                    <li><a href="#">Temporal</a></li>
-                  </ul>
-                </div>
-              </p></div>
-              <div class="col-md-6">    
-                <p>
-                  <p><h3>Filtrar por ciclo <br> de cultivo.</h3></p>
-                  <div class="btn-group" role="group">
-                    <button id="btnFiltroCiclo" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                      Filtro por ciclo
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="btnFiltroCiclo">
-                      <li><a href="#">Primavera-verano</a></li>
-                      <li><a href="#">Otoño-invierno</a></li>
-                    </ul>
-                  </div>
-                </p></div>
-                <div class="col-md-6">    
-                  <p>
-                    <p><h3>Filtrar por tipo <br> de cultivo.</h3></p>
-                    <div class="btn-group" role="group">
-                      <button id="btnFiltroCiclo" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        Filtro por tipo
-                        <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu" role="menu" aria-labelledby="btnFiltroCiclo">
-                        <li><a href="#">Anual</a></li>
-                        <li><a href="#">Perene</a></li>
-                      </ul>
+            <div class="col-md-9">
+                <h2>INIFAP C.E. Zacatecas</h2>
+                <h5>El Campo Experimental Zacatecas (CEZAC) inició sus actividades en el año de 1971 es uno<br>de los 39 campos experimentales estratégicos del INIFAP.</h5>
+				<hr class="red" style="margin-bottom:2em;">
+
+                <div class="row">
+                    <div class="col-md-11">
+						<img class="img-responsive img-rounded" style="width: 100%;" src="_images/cezac.JPG">
+                	</div>
+            	</div>
+
+                <div class="row" style="margin-top:1em;">
+                	<div class="col-md-11">
+                  		 <font style="font-weight:bold; margin-right:0.5em;">Red de Monitoreo Agroclimático del Estado de Zacatecas</font><a href="estaciones.php" ><img src="/images/templatemo_entrar.png"></a>
+
+                        <div style="margin-top:1em; margin-bottom:1em;">
+                            <a href="aplicaciones.php"><button type="button" class="btn btn-success" style="font-size: 16px;">Aplicaciones de la Red de Monitoreo</button></a>
+                            <a href="boletines.php">
+                            <button type="button" class="btn btn-warning" style="font-size: 16px;">Boletín Mensual Reciente</button></a>
+                        </div>
                     </div>
-                  </p></div>
-                  <div class="col-md-6">    
-                    <p>
-                      <p>
-                        <button type="button" class="btn btn-warning" style="font-size: 16px;">Calcular</button></a>
-                      </p>
-                    </p></div>
+                </div>
 
-        <div class="row">
-          <div class="col-md-10 table-responsive" style="margin-bottom:2em;">
-            <table class="table table-bordered table-striped">
-                      <tr>
-                       <th colspan="2" rowspan=2 style="background:#009933; color:#FFF;">Nombre Común</th>
-                       <th rowspan="2" style="background:#009933; color:#FFF;">Nombre Científico</th>
-                       <th colspan="3" style="background:#009933; color:#FFF;">Potencial</th>
-                      <tr>
-                        <th style="background:#009933; color:#FFF;">Alto</th>
-                        <th style="background:#009933; color:#FFF;">Medio</th>
-                        <th style="background:#009933; color:#FFF;">Bajo</th>
-                      <tr>
-                        <th colspan="6" style="background:#cc6600; color:#FFF;">RIEGO</th>
-                      <tr>
-                        <td align="center" valign="middle"><a href="./PotAgric/AjoR.pdf"><img border="0" src="images/icopdf.png" /></a></td>
-                        <td valign="middle">Ajo</td>
-                        <td valign="middle"><i>Allium sativum</i> L.
-                        <td valign="middle">351,494</td>
-                        <td valign="middle">347,323</td>
-                        <td valign="middle">&nbsp;</td>
-                      <tr>
-                        <td align="center" valign="middle"><a href="./PotAgric/AlmendroR.pdf"><img border="0" src="images/icopdf.png" /></a></td>
-                         <td valign="middle">Almendro</td>
-                        <td valign="middle"><i>Prunus amygdalus</i> L.</td>
-                        <td valign="middle">42,830</td>
-                        <td valign="middle">276,337</td>
-                        <td valign="middle">&nbsp;</td>
-                      <tr>
-                        <td align="center" valign="middle"><a href="./PotAgric/AvenaR.pdf"><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Avena
-                        <td valign="middle"><i>Avena sativa</i> L.
-                        <td valign="middle">243,672
-                        <td valign="middle">517,639
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/CacahuateR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Cacahuate
-                        <td valign="middle">Arachis hypogea L.
-                        <td valign="middle">1,544
-                        <td valign="middle">7,449
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/CebadaR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Cebada
-                        <td valign="middle"><i>Hordeum</i> L. <i>vulgare</i>
-                        <td valign="middle">272,275
-                        <td valign="middle">536,775
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/CebollaR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Cebolla
-                        <td valign="middle"><i>Allium cepa</i> L.
-                        <td valign="middle">351,494
-                        <td valign="middle">347,323
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/ChabacanoR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Chabacano
-                        <td valign="middle"><i>Prunus armeniaca</i> L.
-                        <td valign="middle">5,066
-                        <td valign="middle">151,907
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/ChileR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Chile
-                        <td valign="middle"><i>Capsicum annum</i> L.
-                        <td valign="middle">238,368
-                        <td valign="middle">490,756
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/CirueloR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Ciruelo
-                        <td valign="middle"><i>Prunus salicina Lindl</i>
-                        <td valign="middle">24,010
-                        <td valign="middle">131,234
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/CirueloMexicanoR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Ciruelo mexicano
-                        <td valign="middle"><i>Spondias mombin</i> L.
-                        <td valign="middle">0
-                        <td valign="middle">72,826
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/DuraznoR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Durazno
-                        <td valign="middle"><i>Prunus persica</i> (L.) <i>Batsch</i>
-                        <td valign="middle">42,830
-                        <td valign="middle">276,337
-                          <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/FrijolR.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Frijol
-                        <td valign="middle"><i>Phaseolus vulgaris</i>
-                        <td valign="middle">256,219
-                        <td valign="middle">495,391
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/GuayaboR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Guayabo
-                        <td valign="middle"><i>Psidium guajaba</i> L.
-                        <td valign="middle">15,229
-                        <td valign="middle">38,075
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/JitomateR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Jitomate
-                        <td valign="middle"><i>Lycopersicum esculentum Mill</i>
-                        <td valign="middle">3,121
-                        <td valign="middle">609,564
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/MaizR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Ma&iacute;z
-                        <td valign="middle"><i>Zea mays</i> L.
-                        <td valign="middle">257,261
-                        <td valign="middle">498,692
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/ManzanoR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Manzano
-                        <td valign="middle"><i>Malus pumila Mill</i>
-                        <td valign="middle">401
-                        <td valign="middle">82,238
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/NopalTuneroR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Nopal tunero
-                        <td valign="middle"><i>Opuntia spp</i>
-                        <td valign="middle">31,735
-                        <td valign="middle">27,801
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/PapaR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Papa
-                        <td valign="middle"><i>Solanum tuberosum</i> L.
-                        <td valign="middle">232,029
-                        <td valign="middle">423,185
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/PeralR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Peral
-                        <td valign="middle"><i>Pyrus communis</i> L.
-                        <td valign="middle">49,282
-                        <td valign="middle">88,476
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/SorgoR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Sorgo
-                        <td valign="middle"><i>Sorghum bicolor</i> (L.) <i>Moench</i>
-                        <td valign="middle">233,656
-                        <td valign="middle">405,059
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/TrigoR.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Trigo
-                        <td valign="middle"><i>Triticum aestivum</i>
-                        <td valign="middle">243,672
-                        <td valign="middle">517,639
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/VidRI.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Vid Regi&oacute;n I
-                        <td valign="middle"><i>Vitis vinifera</i> L.
-                        <td valign="middle">34,575
-                        <td valign="middle">95,349
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/VidRII.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Vid Regi&oacute;n II
-                        <td valign="middle"><i>Vitis vinifera</i> L.
-                        <td valign="middle">316,509
-                        <td valign="middle">280,639
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/VidRIII.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Vid Regi&oacute;n III
-                        <td valign="middle"><i>Vitis vinifera</i> L.
-                        <td valign="middle">25,910
-                        <td valign="middle">10,011
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <th colspan=6 style="background:#cc6600; color:#FFF;">TEMPORAL</th>
-                      <tr bgcolor="#FFFFFF">
-                        <td align="center" valign="middle"><a href=./PotAgric/AgaveMezcalT.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Agave mezcalero
-                        <td valign="middle"><i>Agave salmiana Otto ex Salm-Dick</i>
-                        <td valign="middle">418,382
-                        <td valign="middle">228,362
-                        <td valign="middle">&nbsp;
-                      <tr bgcolor="#FFFFFF">
-                        <td align="center" valign="middle"><a href=./PotAgric/AgaveTequilaT.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Agave tequilero
-                        <td valign="middle"><i>Agave tequilana Weber</i>
-                        <td valign="middle">39,266
-                        <td valign="middle">116,227
-                        <td valign="middle">&nbsp;
-                      <tr bgcolor="#FFFFFF">
-                        <td align="center" valign="middle"><a href=./PotAgric/AvenaT.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Avena
-                        <td valign="middle"><i>Avena sativa</i> L.
-                        <td valign="middle">53,967
-                        <td valign="middle">276,632
-                        <td valign="middle">565,119
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/CacahuateT.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Cacahuate
-                        <td valign="middle"><i>Arachis hypogea</i> L.
-                        <td valign="middle">2,716
-                        <td valign="middle">11,358
-                        <td valign="middle">&nbsp;
-                      <tr bgcolor="#FFFFFF">
-                        <td align="center" valign="middle"><a href=./PotAgric/CanolaT.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Canola
-                        <td valign="middle"><i>Brassica napus</i> L.
-                        <td valign="middle">166,653
-                        <td valign="middle">674,472
-                        <td valign="middle">&nbsp;
-                      <tr>
-                        <td align="center" valign="middle"><a href=./PotAgric/CebadaT.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Cebada
-                        <td valign="middle"><i>Hordeum vulgare</i> L.
-                        <td valign="middle">53,967
-                        <td valign="middle">279,412
-                        <td valign="middle">603,842
-                      <tr bgcolor="#FFFFFF">
-                        <td align="center" valign="middle"><a href=./PotAgric/CirueloMexicanoT.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Ciruelo mexicano
-                        <td valign="middle"><i>Spondias mombin</i> L.
-                        <td valign="middle">0
-                        <td valign="middle">72,826
-                        <td valign="middle">&nbsp;
-                      <tr bgcolor="#FFFFFF">
-                        <td align="center" valign="middle"><a href=./PotAgric/DuraznoT.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Durazno
-                        <td valign="middle"><i>Prunus persica</i> (L.) <i>Batsch</i>
-                        <td valign="middle">48,936
-                        <td valign="middle">43,581
-                        <td valign="middle">4,968
-                      <tr bgcolor="#FFFFFF">
-                        <td align="center" valign="middle"><a href=./PotAgric/FrijolT.pdf><img border="0" src="images/icopdf.png" /></a>
-                          <td valign="middle">Frijol
-                          <td valign="middle"><i>Phaseolus vulgaris</i>
-                        <td valign="middle">82,119
-                        <td valign="middle">298,542
-                        <td valign="middle">580,583
-                      <tr bgcolor="#FFFFFF">
-                        <td align="center" valign="middle"><a href=./PotAgric/GirasolT.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Girasol
-                        <td valign="middle"><i>Helianthus annus</i>
-                        <td valign="middle">86,925
-                        <td valign="middle">602,853
-                        <td valign="middle">&nbsp;
-                      <tr bgcolor="#FFFFFF">
-                        <td align="center" valign="middle"><a href=./PotAgric/HabaT.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Haba
-                        <td valign="middle"><i>Vicia faba</i> L.
-                        <td valign="middle">14,280
-                        <td valign="middle">61,506
-                        <td valign="middle">&nbsp;
-                      <tr bgcolor="#FFFFFF">
-                        <td align="center" valign="middle"><a href=./PotAgric/MaizT.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Ma&iacute;z
-                        <td valign="middle"><i>Zea mays</i> L.
-                        <td valign="middle">74,601
-                        <td valign="middle">298,416
-                        <td valign="middle">587,950
-                      <tr bgcolor="#FFFFFF">
-                        <td align="center" valign="middle"><a href=./PotAgric/NopalTuneroT.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Nopal tunero
-                        <td valign="middle"><i>Opuntia spp</i>
-                        <td valign="middle">576,297
-                        <td valign="middle">375,252
-                        <td valign="middle">&nbsp;
-                      <tr bgcolor="#FFFFFF">
-                        <td align="center" valign="middle"><a href=./PotAgric/PitayoT.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Pitayo
-                        <td valign="middle"><i>Stenocereus queretaroensis (Weber) Buxbaum</i>
-                        <td valign="middle">40,471
-                        <td valign="middle">28,995
-                        <td valign="middle">&nbsp;
-                      <tr bgcolor="#FFFFFF">
-                        <td align="center" valign="middle"><a href=./PotAgric/SorgoT.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Sorgo
-                        <td valign="middle"><i>Sorghum bicolor</i> (L.) <i>Moench</i>
-                        <td valign="middle">3,890
-                        <td valign="middle">47,158
-                        <td valign="middle">&nbsp;
-                      <tr bgcolor="#FFFFFF">
-                        <td align="center" valign="middle"><a href=./PotAgric/TrigoT.pdf><img border="0" src="images/icopdf.png" /></a>
-                        <td valign="middle">Trigo
-                        <td valign="middle"><i>Triticum aestivum</i>
-                        <td valign="middle">53,967
-                        <td valign="middle">276,632
-                        <td valign="middle">565,119
-                    </table>
-        
+                <div class="row" style="margin-top:1em;">
+                	 <div class="col-md-7">
+                     	<div style="text-align: justify;">
+                    		Cuenta con 38 estaciones meteorológicas automáticas, cada una está equipada con sensores para medir la temperatura, humedad relativa, precipitación, dirección y velocidad del viento, radiación solar y humedad de la hoja.<br><br>Las mediciones de las condiciones del estado del tiempo se realiza cada 15 minutos.
+		                </div>
+                     </div>
+                     <div class="col-md-3">
+                     	<a href="estaciones.php" ><img title="Red de Monitoreo Agroclimático del Estado de Zacatecas" src="/images/estacion.png" width="301" height="204"></a>
+                     </div>
+                </div>
+
+			</div>
+
+            <div class="col-md-3">
+				<div class="alert alert-success" role="alert">Contacto:<br>
+                TEL: <strong>55-38-71-87-00</strong>&nbsp;&nbsp;<br>Ext: <strong>82328, 82337 </strong><br><a href="mailto:inifap.zacatecas@inifap.gob.mx; arechiga.delia@inifap.gob.mx">Enviar Correo</a></div>
+				 <!--SECCIÓN MODIFICABLE | ACTUALIZACIÓN DE DICHA PÁGINA-->
+                <div class="table-bordered">
+                    <div>
+                        <br>
+                        <small>
+                            &nbsp; &nbsp;
+                            <strong>Autores</strong><br>
+                            &nbsp; &nbsp;
+                            INIFAP - CEZAC - GGM - CAFI
+                            &nbsp; &nbsp;<br>
+                            <span></span>
+                            &nbsp; &nbsp;
+                            <strong>Fecha actualización</strong><br>
+                            &nbsp; &nbsp;
+                            <span>13-09-2023</span>
+                            <br>
+                            <br>
+                        </small>
+                    </div>
+                </div>
+                <br>
+
+				
+				<!--<div class="panel-group ficha-collapse" id="accordion">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-parent="#accordion" data-toggle="collapse" href="#panel-01" aria-expanded="true" aria-controls="panel-01">
+                        <img src="/_images/clima.png"><font class="red" style="font-size:1.2em;">Tiempo Real</font>
+                        </a>
+                      </h4>
+                      <button type="button" class="collpase-button collapsed" data-parent="#accordion" data-toggle="collapse" href="#panel-01"></button>
+                    </div>
+
+                    <div class="panel-collapse collapse" id="panel-01">
+                      <!--<div class="panel-body">
+                      	<select class="form-control" id="estaciones">
+                                                </select>
+                        <div id="output"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>-->
+
+                <!--SECCIÓN MODIFICABLE | MENU CONTEXTUAL -->
+                <div class="list-group">
+                	<!--<a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalInfo"><img src="/images/templatemo_list.png" style="margin-right:10px;">Información Importante</a>-->
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="potagricola.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Potencial Productivo Agrícola</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="potforrajero.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Potencial Productivo Forrajero</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionest.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Publicaciones Técnicas</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionesc.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Publicaciones Científicas</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionesc.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Agrocostos</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalDir"><img src="/images/templatemo_list.png" style="margin-right:10px;">Directorio</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalServ"><img src="/images/templatemo_list.png" style="margin-right:10px;">Servicios</a>
+                </div>
+
+                <!--SECCIÓN MODIFICABLE | MAPA DE GOOGLE-->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-11 col-xs-12">
+                        <span id="_mcContenido_lblUbicacion1"><h5>Ubicación</h5></span>
+                        <span id="_mcContenido_lblMap1">
+                            <iframe width="100%" height="auto"
+                                    src="https://www.google.com/maps/embed/v1/place?q=inifap&key=AIzaSyB4UePdvYtsjineIVXT4w8MG-roUoxbnLM" frameborder="0" allowfullscreen="" style="border: 0px currentColor; border-image: none;"></iframe>
+                        </span>
+                    </div>
+                </div>
+                <br>
+                
+            </div>
+        </div>
+    </div>
+ </main>
+ 
+    <div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Información</h4>
           </div>
+          <div class="modal-body">
+                    <div>Más información, Campo Experimental Zacatecas <br>
+                     <strong>55-38-71-87-00</strong>&nbsp;&nbsp;Ext: <strong>82328, 82337 </strong> <a href="mailto:inifap.zacatecas@inifap.gob.mx; arechiga.delia@inifap.gob.mx">Enviar Correo</a>.</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
       </div>
+    </div>
 
-
+     <div class="modal fade" id="modalServ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Información</h4>
+          </div>
+          <div class="modal-body">
+           			<h4>Servicios</h4>
+                    <h5>
+                    <img src="/images/templatemo_list.png" style="margin-right:10px;">Laboratorio de Suelos<br>
+                    <img src="/images/templatemo_list.png" style="margin-right:10px;">Laboratorio de Entomología<br>
+                    <img src="/images/templatemo_list.png" style="margin-right:10px;">Laboratorio de Fitopatología<br>
+                    <img src="/images/templatemo_list.png" style="margin-right:10px;">Laboratorio de Biología Molecular<br>
+                    <img src="/images/templatemo_list.png" style="margin-right:10px;">Laboratorio de Sistemas de Información Geográfica<br>
+                    </h5>
+                    <div>Más información, Campo Experimental Zacatecas <br>
+                    <strong>55-38-71-87-00</strong>&nbsp;&nbsp;Ext: <strong>82328, 82337 </strong> <a href="mailto:inifap.zacatecas@inifap.gob.mx; arechiga.delia@inifap.gob.mx">Enviar Correo</a>.</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
       </div>
-      
-      
-      <div class="collapse navbar-collapse" id="subenlaces">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Enlace</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Desplegable <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Acción</a></li>
-              <li><a href="#">Otra acción</a></li>
-              <li><a href="#">Algo más aquí</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Enlace separado</a></li>
-            </ul>
-          </li>
-           <li><a href="#">Enlace</a></li>
-        </ul>
+    </div>
+
+    <div class="modal fade" id="modalDir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Información</h4>
+          </div>
+          <div class="modal-body">
+          	<table class="table table-bordered" style="font-size:0.8em;">
+            	<tr>
+		  			<td colspan="3" align="center" valign="middle"><p align="center"><strong>Dr. Luis Roberto  Reveles Torres<br>
+		  			  Director de  Coordinación y Vinculación del INIFAP-Zacatecas<br>
+  &ldquo;Campo  Experimental Zacatecas&rdquo;</strong></p></td>
+				</tr>
+                <tr>
+                  <td align="center" valign="middle"><strong>No.</strong></td>
+                    <td align="center" valign="middle"><strong>NOMBRE</strong></td>
+                    <td align="center" valign="middle"><strong>PROGRAMA</strong></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Casas Flores José Israel, MG</td>
+                  <td>Agrometeorología y Modelaje</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Cid Ríos Jose Angel, MC</td>
+                  <td>Fríjol Y Garbanzo</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Cruz Bravo Raquel Karina, Dra.</td>
+                  <td>Inocuidad De Alimentos</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Echavarria Cháirez Francisco, PhD.</td>
+                  <td>Fertilidad De Suelos y Nutrición Vegetal</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Figueroa Gonzalez Juan Jose, Dr.</td>
+                  <td>Fríjol y Garbanzo</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Gutiérrez Luna Ramón, PhD.</td>
+                  <td>Pastizales y Cultivos Forrajeros</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Herrera Mayra Denise, MC.</td>
+                  <td>Fríjol y Garbanzo</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Medina Garcia Guillermo, Dr.</td>
+                  <td>Agrometeorología y Modelaje</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Medina Martinez Enrique, MC.</td>
+                  <td>Maíz</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Melero Meraz Valentín, MC.</td>
+                  <td>Frutales</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>Mena Covarrubias Jaime, PhD.</td>
+                  <td>Sanidad Forestal y Agrícola</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Ramirez Cabral Nadiezhda, PhD.</td>
+                  <td>Agrometeorología y Modelaje</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>Reveles Hernandez Manuel, Ing.</td>
+                  <td>Hortalizas</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>Rubio Aguirre Francisco Antonio, MC.</td>
+                  <td>Pastizales y Cultivos Forrajeros</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td>Sanchez Gutiérrez Ricardo Alonso, MC.</td>
+                  <td>Pastizales y Cultivos Forrajeros</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td>Sanchez Toledano Blanca Isabel, Dra.</td>
+                  <td>Socioeconomía</td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td>Serna Perez Alfonso, PhD.</td>
+                  <td>Fertilidad De Suelos y Nutrición Vegetal</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>Servin Palestina Miguel, Dr.</td>
+                  <td>Ingeniería De Riego</td>
+                </tr>
+                <tr>
+                  <td>19</td>
+                  <td>Salas Muñoz Silvia, Dra. (Cátedras CONACYT)</td>
+                  <td>Biología Molecular</td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>Reveles Torres Luis Roberto, Dr.</td>
+                  <td>Recursos Genéticos</td>
+                </tr>
+                    </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
       </div>
-    </select>
-    </main>
+    </div>
+    
+	<script>
+	$gmx(document).ready(function(){
+		$("select").change(function () {
+			var selected = $("#estaciones option:selected");
+			var output = "";
+			if(selected.val() != 0){
+				output = selected.val();
+			}
 
-    <!-- JS -->
-    <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+			 $('#output').load('climatr.php',{est:output});
 
-  </body>
+
+			})
+			.trigger('change');
+
+			$("#sel").click(function () {
+			if ($("#element").is (':hidden'))
+			{
+
+				$("#element").show()
+			}
+			else
+			{
+				$("#element").hide()
+			}
+
+		});
+	});
+	</script>
+    
+    
+			<script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+		</body>
+
 </html>

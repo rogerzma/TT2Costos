@@ -6,7 +6,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     
-    <!--NO MODIFICAR-->
     <title>INIFAP C.E. Zacatecas</title>
     
      
