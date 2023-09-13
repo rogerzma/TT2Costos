@@ -23,6 +23,7 @@ Route::view('/index', 'index');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/index', function () {return view('index');});
+Route::view('/inicio', 'inicio')->name('inicio');
 Route::view('/Calculadora', 'Calculadora')->name('calculadora');
 Route::view('/MapaPotencial', 'MapaPotencial')->name('MapaPotencial');
 Route::view('/RegistrarCultivo', 'RegistrarCultivo')->name('RegistrarCultivo');
