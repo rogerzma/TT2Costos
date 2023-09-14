@@ -160,11 +160,20 @@
                       </div>
                     </div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
+                  </div>
+                </div>-->
+
+                <!--SECCIÓN MODIFICABLE | MENU CONTEXTUAL -->
+                <div class="list-group">
+                	<!--<a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalInfo"><img src="/images/templatemo_list.png" style="margin-right:10px;">Información Importante</a>-->
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="potagricola.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Potencial Productivo Agrícola</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="potforrajero.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Potencial Productivo Forrajero</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionest.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Publicaciones Técnicas</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionesc.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Publicaciones Científicas</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="{{ route('inicio') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Agrocostos</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalDir"><img src="/images/templatemo_list.png" style="margin-right:10px;">Directorio</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalServ"><img src="/images/templatemo_list.png" style="margin-right:10px;">Servicios</a>
+                </div>
 
                 <!--SECCIÓN MODIFICABLE | MAPA DE GOOGLE-->
                 <div class="row">

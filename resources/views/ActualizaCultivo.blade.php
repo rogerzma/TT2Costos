@@ -1,133 +1,267 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Actualizar cultivos</title>
+@extends("layouts.appGOB")
 
+@section("title", "ActualizaCultivo")
 
-    <!-- CSS -->
-    <link href="/favicon.ico" rel="shortcut icon">
-    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
+@section("view-name", "ActualizaCultivo")
 
-    <!-- Respond.js soporte de media queries para Internet Explorer 8 -->
-    <!-- ie8.js EventTarget para cada nodo en Internet Explorer 8 -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/0.2.2/ie8.js"></script>
-    <![endif]-->
+@section("content")
 
-  </head>
-  <body>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-9">
+            <br><h4>Actualizar cultivo</h4>
+    <hr class="red">
 
-    <!-- Contenido -->
-    <main class="page">
-      <div class="container">
-        <hr>
-        <h3>Modificar cultivo</h3>
-        <hr class="red">
-        
+    <h5>Características generales</h5><br> 
+    
+    <div class="container">
+    <div class="row">
+        <div class="col-md-2 5">
+            <p>Nombre del cultivo</p>
+            <input class="form-control" placeholder="Area de texto" type="text"></div>
+        <div class="col-md-2 5">
+            <p>Nombre del cultivo</p>
+            <input class="form-control" placeholder="Area de texto" type="text"></div>
+        <div class="col-md-2 5">
+            <p>Nombre del cultivo</p>
+            <input class="form-control" placeholder="Area de texto" type="text"></div>
+        <div class="col-md-2 5">
+            <p>Nombre del cultivo</p>
+            <input class="form-control" placeholder="Area de texto" type="text"></div>
+        <div class="col-md-2 5">
+            <p>Nombre del cultivo</p>
+            <input class="form-control" placeholder="Area de texto" type="text"></div>
+    </div>
+
+    <br><h5>Preparación del terreno</h5><br>
 
         <div class="row">
-          <div class="col-md-6">    
-              <p>
-                <p>Aquí se muestran los cultivos registrados para las diferentes operaciones del sistema.</p>
-                
-              </p></div> 
-          
+            <div class="col-md-2 5">
+                <p>Concepto</p>
+                <input class="form-control" placeholder="Ingrese el concepto" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Unidad</p>
+                <input class="form-control" placeholder="Ingrese la unidad de medición" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Cantidad</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Precio ($$ MXN)</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2">
+                <br><br><a href="#">
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="margin-right: 10px;"></span>
+                </a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                </a>
+        </div>
+    </div>   
+
+    <br><h5>Siembra</h5><br>
+
         <div class="row">
-          <div class="col-md-10 table-responsive" style="margin-bottom:2em;">
-            <table class="table table-bordered table-striped">
-                      <tr>
-                       <th colspan="1" style="background:#009933; color:#FFF;">Nombre </th>
-                       <th colspan="1" style="background:#009933; color:#FFF;">Tipo de cultivo</th>
-                       <th colspan="1" style="background:#009933; color:#FFF;">Modalidad</th>
-                       <th colspan="1" style="background:#009933; color:#FFF;">Opciones</th>
-                      <tr>
-                        <td valign="middle">Frijol</td>
-                        <td valign="middle">Anual</td>
-                        <td valign="middle">Riego</td>
-                        <td valign="middle">
-                            <a href="#">
-                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                            </a>
-                            <a href="#">
-                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                            </a>
-                      <tr>
-                        <td valign="middle">Chile</td>
-                        <td valign="middle">Anual</td>
-                        <td valign="middle">Temporal</td>
-                        <td valign="middle"> 
-                            <a href="#">
-                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                            </a>
-                            <a href="#">
-                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                            </a>
-                      <tr>
-                        <td valign="middle">Maiz</td>
-                        <td valign="middle">Anual</td>
-                        <td valign="middle">Temporal</td>
-                        <td valign="middle"> 
-                            <a href="#">
-                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                            </a>
-                            <a href="#">
-                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                            </a>
-                      <tr>
-                        <td valign="middle">Fresa</td>
-                        <td valign="middle">Perenne</td>
-                        <td valign="middle">Riego</td>
-                        <td valign="middle"> 
-                            <a href="#">
-                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                            </a>
-                            <a href="#">
-                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                            </a>
-                        </td>
-                
-                    </table>
-                    <div class="row">
-                        <div class="col-md-6">    
-                            <p>
-                              <p>
-                                <button type="button" class="btn btn-primary" style="font-size: 16px;">Nuevo cultivo</button></a>
-                              </p>
-                              
-                            </p></div> 
-        
-          </div>
-      </div>
+            <div class="col-md-2 5">
+                <p>Concepto</p>
+                <input class="form-control" placeholder="Ingrese el concepto" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Unidad</p>
+                <input class="form-control" placeholder="Ingrese la unidad de medición" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Cantidad</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Precio ($$ MXN)</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2">
+                <br><br><a href="#">
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="margin-right: 10px;"></span>
+                </a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                </a>
+        </div>
+    </div> 
 
+    <br><h5>Fertilización</h5><br>
 
-      </div>
-      
-      
-      <div class="collapse navbar-collapse" id="subenlaces">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Enlace</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Desplegable <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Acción</a></li>
-              <li><a href="#">Otra acción</a></li>
-              <li><a href="#">Algo más aquí</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Enlace separado</a></li>
-            </ul>
-          </li>
-           <li><a href="#">Enlace</a></li>
-        </ul>
-      </div>
-    </select>
-    </main>
+        <div class="row">
+            <div class="col-md-2 5">
+                <p>Concepto</p>
+                <input class="form-control" placeholder="Ingrese el concepto" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Unidad</p>
+                <input class="form-control" placeholder="Ingrese la unidad de medición" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Cantidad</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Precio ($$ MXN)</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2">
+                <br><br><a href="#">
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="margin-right: 10px;"></span>
+                </a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                </a>
+        </div>
+    </div>   
 
-    <!-- JS -->
-    <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+    <br><h5>Combate de maleza</h5><br>
 
-  </body>
-</html>
+        <div class="row">
+            <div class="col-md-2 5">
+                <p>Concepto</p>
+                <input class="form-control" placeholder="Ingrese el concepto" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Unidad</p>
+                <input class="form-control" placeholder="Ingrese la unidad de medición" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Cantidad</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Precio ($$ MXN)</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2">
+                <br><br><a href="#">
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="margin-right: 10px;"></span>
+                </a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                </a>
+        </div>
+    </div>  
+
+    <br><h5>Control de plagas</h5><br>
+
+        <div class="row">
+            <div class="col-md-2 5">
+                <p>Concepto</p>
+                <input class="form-control" placeholder="Ingrese el concepto" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Unidad</p>
+                <input class="form-control" placeholder="Ingrese la unidad de medición" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Cantidad</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Precio ($$ MXN)</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2">
+                <br><br><a href="#">
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="margin-right: 10px;"></span>
+                </a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                </a>
+        </div>
+    </div>  
+
+    <br><h5>Control de enfermedades</h5><br>
+
+        <div class="row">
+            <div class="col-md-2 5">
+                <p>Concepto</p>
+                <input class="form-control" placeholder="Ingrese el concepto" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Unidad</p>
+                <input class="form-control" placeholder="Ingrese la unidad de medición" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Cantidad</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Precio ($$ MXN)</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2">
+                <br><br><a href="#">
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="margin-right: 10px;"></span>
+                </a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                </a>
+        </div>
+    </div>   
+
+    <br><h5>Cosecha</h5><br>
+
+        <div class="row">
+            <div class="col-md-2 5">
+                <p>Concepto</p>
+                <input class="form-control" placeholder="Ingrese el concepto" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Unidad</p>
+                <input class="form-control" placeholder="Ingrese la unidad de medición" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Cantidad</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Precio ($$ MXN)</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2">
+                <br><br><a href="#">
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="margin-right: 10px;"></span>
+                </a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                </a>
+        </div>
+    </div>  
+
+    <br><h5>Flete para siembra</h5><br>
+
+        <div class="row">
+            <div class="col-md-2 5">
+                <p>Concepto</p>
+                <input class="form-control" placeholder="Ingrese el concepto" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Unidad</p>
+                <input class="form-control" placeholder="Ingrese la unidad de medición" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Cantidad</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Precio ($$ MXN)</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2">
+                <br><br><a href="#">
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="margin-right: 10px;"></span>
+                </a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                </a>
+        </div>
+    </div>   
+
+    <br><h5>Renta de la tierra</h5><br>
+
+        <div class="row">
+            <div class="col-md-2 5">
+                <p>Concepto</p>
+                <input class="form-control" placeholder="Ingrese el concepto" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Unidad</p>
+                <input class="form-control" placeholder="Ingrese la unidad de medición" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Cantidad</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Precio ($$ MXN)</p>
+                <input class="form-control" placeholder="Ingrese la cantidad necesaria" type="text"></div>
+            <div class="col-md-2">
+                <br><br><a href="#">
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="margin-right: 10px;"></span>
+                </a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                </a>
+        </div>
+    </div><br>
+
+</div> 
+
+<br><p>
+    <button class="btn btn-primary" type="button">Registrar cultivo</button>
+</p><br>
+
+@endsection

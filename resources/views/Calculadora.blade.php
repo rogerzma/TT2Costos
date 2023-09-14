@@ -1,6 +1,9 @@
 @extends("layouts.appGOB")
 
+
 @section("title", "Calculadora")
+
+
 
 @section("content")
     <br>

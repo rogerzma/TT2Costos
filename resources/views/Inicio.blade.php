@@ -31,7 +31,7 @@
         </p></div>
     <div class="col-md-4">    
         <p>
-            <a button class="btn btn-default" type="button">Reportes</a>
+            <a href="{{ route('filtrado') }}" button class="btn btn-default" type="button">Reportes</a>
         </p></div>
     </div>
 
