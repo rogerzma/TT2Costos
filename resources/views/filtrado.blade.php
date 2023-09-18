@@ -73,85 +73,72 @@
                   <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a></li>
                   <li><a href="http://www.gob.mx/inifap">Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias</a></li>
                   <li><a href="http://zacatecas.inifap.gob.mx/">Inifap C.E. Zacatecas</a></li>
-                  <li><a href="#">Agrocostos</a></li>
+                  <li><a href="{{ route('inicio') }}">Agrocostos</a></li>
                   <li class="active">Reportes</li>
               </ol>
           </div>
 
       <div class="container">
-        <hr>
-        <h3>Reportes</h3>
-        <hr class="red">
-        
+      <div class="row">
+        <div class="col-md-9">
+          <h2>Reportes</h2>
+          <hr class="red">
+        <p>Seleccione las características de filtrado para el reporte</p>
 
+        </div>
+      </div>
+      
         <div class="row">
-          <div class="col-md-6">    
+          <div class="col-md-4">    
               <p>
-                <p><h3>Filtrar por cultivo.</h3></p>
-                <div class="btn-group" role="group">
-                  <button id="btnFiltroCultivo" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    Filtro por cultivo
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="btnFiltroCultivo">
-                    <li><a href="#">Frijol</a></li>
-                    <li><a href="#">Maiz</a></li>
-                    <li><a href="#">Chile</a></li>
-                    <li><a href="#">Tomate</a></li>
-                  </ul>
-                </div>
+                <p><h4>Filtrar por cultivo.</h4></p> 
+                <select class="form-control">
+                  <option>Frijol</option>
+                  <option>Maiz</option>
+                  <option>Chile</option>
+                  <option>Tomate</option>
+                </select>
               </p></div> 
-          <div class="col-md-6">    
+          <div class="col-md-4">    
               <p>
-                <p><h3>Filtrar por modalidad.</h3></p>
-                <div class="btn-group" role="group">
-                  <button id="btnFiltroModalidad" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    Filtro por modalidad
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="btnFiltroModalidad">
-                    <li><a href="#">Riego</a></li>
-                    <li><a href="#">Temporal</a></li>
-                  </ul>
-                </div>
+                <p><h4>Filtrar por modalidad.</h4></p>
+                <select class="form-control">
+                  <option>Riego</option>
+                  <option>Temporal</option>
+
+                </select>
               </p></div>
-              <div class="col-md-6">    
+        </div>
+            <div class="row">
+              <div class="col-md-4">    
                 <p>
-                  <p><h3>Filtrar por ciclo <br> de cultivo.</h3></p>
-                  <div class="btn-group" role="group">
-                    <button id="btnFiltroCiclo" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                      Filtro por ciclo
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="btnFiltroCiclo">
-                      <li><a href="#">Primavera-verano</a></li>
-                      <li><a href="#">Otoño-invierno</a></li>
-                    </ul>
-                  </div>
+                  <p><h4>Filtrar por ciclo de  cultivo.</h4></p>
+                  <select class="form-control">
+                    <option>Primavera-verano</option>
+                    <option>Otoño-invierno</option>
+  
+                  </select>
                 </p></div>
-                <div class="col-md-6">    
+                <div class="col-md-4">    
                   <p>
-                    <p><h3>Filtrar por tipo <br> de cultivo.</h3></p>
-                    <div class="btn-group" role="group">
-                      <button id="btnFiltroCiclo" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        Filtro por tipo
-                        <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu" role="menu" aria-labelledby="btnFiltroCiclo">
-                        <li><a href="#">Anual</a></li>
-                        <li><a href="#">Perene</a></li>
-                      </ul>
-                    </div>
+                    <p><h4>Filtrar por tipo de cultivo.</h4></p>
+                    <select class="form-control">
+                      <option>Anual</option>
+                      <option>Perenne</option>
+    
+                    </select>
                   </p></div>
                   <div class="col-md-6">    
                     <p>
                       <p>
-                        <button type="button" class="btn btn-warning" style="font-size: 16px;">Calcular</button></a>
+                        <button type="button" class="btn btn-warning" style="font-size: 16px;">Buscar</button></a>
                       </p>
                     </p></div>
-
+            </div>
         <div class="row">
           <div class="col-md-10 table-responsive" style="margin-bottom:2em;">
+            <br>
+            <h3>Resultados</h3>
             <table class="table table-bordered table-striped">
                       <tr>
                        <th colspan="2" rowspan=2 style="background:#009933; color:#FFF;">Nombre Común</th>
@@ -449,6 +436,8 @@
         
           </div>
       </div>
+
+      
 
 
       </div>

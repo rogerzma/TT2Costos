@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-9">
             <div class="card">
                 <div class="card-header">
                     <h2>{{ __('Iniciar sesión') }}</h2>
@@ -69,6 +69,19 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-md-3">
+
+            <!--SECCIÓN MODIFICABLE | MENU CONTEXTUAL -->
+            <div class="list-group">
+                <a class="list-group-item" style="text-decoration: none;" href="Inicio.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+                <a class="list-group-item" style="text-decoration: none;" href="Calculadora.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Calculadora</a>
+                <a class="list-group-item" style="text-decoration: none;" href="MapaPotencial.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Mapa de potencial</a>
+                <a class="list-group-item" style="text-decoration: none;" href="Reportes.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Reportes</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Iniciar sesión</a>
+            </div>
+        </div>
+
     </div>
 </div>
 @endsection

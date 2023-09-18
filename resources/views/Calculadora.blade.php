@@ -11,82 +11,61 @@
     <br>
 <div class="container">
         <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-8">
             <h4>Calculadora Agrocostos</h4>
             <hr class="red">
             <h5>Seleccione las características del cultivo</h5><br> 
+            
         </div>
+        
+        
         </div>
 </div>
 
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3">
             <p>Cultivo</p>
-                <div class="btn-group" role="group">
-                    <button id="btnFiltroCultivo" type="button" class="btn btn-default dropdown-toggle btn-md" data-toggle="dropdown" aria-expanded="false">
-                        -Cultivo a seleccionar-
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="btnFiltroCultivo">
-                        <li><a href="#">Frijol</a></li>
-                        <li><a href="#">Maiz</a></li>
-                        <li><a href="#">Chile</a></li>
-                        <li><a href="#">Tomate</a></li>
-                    </ul>
-                </div>
+                    <select class="form-control">
+                        <option>Frijol</option>
+                        <option>Maiz</option>
+                        <option>Chile</option>
+                        <option>Tomate</option>
+                      </select>
         </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <p> Ciclo de cultivo</p>
-            <div class="btn-group" role="group">
-                    <button id="btnFiltroCultivo" type="button" class="btn btn-default dropdown-toggle btn-md" data-toggle="dropdown" aria-expanded="false">
-                        -Elija el ciclo-
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="btnFiltroCultivo">
-                        <li><a href="#">P-V</a></li>
-                        <li><a href="#">O-I</a></li>
-                    </ul>
-            </div>
+                <select class="form-control">
+                    <option>P-V</option>
+                    <option>O-I</option>
+                  </select>
     </div> 
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <p>No. de hectareas</p>
                 <input class="form-control" placeholder="Ingrese las hectareas a calcular" type="text">
             </div>
     </div><br>
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3">
             <p>Modalidad</p>
-                <div class="btn-group" role="group">
-                    <button id="btnFiltroCultivo" type="button" class="btn btn-default dropdown-toggle btn-md" data-toggle="dropdown" aria-expanded="false">
-                        -Seleccione la modalidad-
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="btnFiltroCultivo">
-                        <li><a href="#">Riego</a></li>
-                        <li><a href="#">temporal</a></li>
-                    </ul>
-                </div>
+                <select class="form-control">
+                    <option>Riego</option>
+                    <option>Temporal</option>
+                  </select>
         </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <p>Precio por tonelada $ (MXN)</p>
                 <input class="form-control" placeholder="Ingrese el precio de cada tonelada" type="text">
             </div>
     </div><br>
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-5">
             <p>Si desea proyectar los costos a futuro, seleccione un año</p>
-                <div class="btn-group" role="group">
-                    <button id="btnFiltroCultivo" type="button" class="btn btn-default dropdown-toggle btn-md" data-toggle="dropdown" aria-expanded="false">
-                        -Seleccione el año-
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="btnFiltroCultivo">
-                        <li><a href="#">2024</a></li>
-                        <li><a href="#">2025</a></li>
-                        <li><a href="#">2026</a></li>
-                    </ul>
-                </div>
+                <select class="form-control" placeholder="Seleccione el año">
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                  </select>
         </div>
             <div class="col-md-4">
                 <br>
@@ -97,7 +76,7 @@
 
 <div class="container">
     <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-10">
         <h3>Resultado</h3>
         <h5>información del cultvo</h5>
         <table class="table table-bordered">
@@ -120,7 +99,7 @@
 
 <div class="container">
     <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-10">
         <h5>Preparación del terreno</h5>
         <table class="table table-bordered">
                 <tr>
@@ -164,7 +143,7 @@
 
 <div class="container">
     <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-10">
         <h5>Siembra</h5>
         <table class="table table-bordered">
                 <tr>
@@ -196,7 +175,7 @@
 
 <div class="container">
     <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-10">
         <h5>Fertilización</h5>
         <table class="table table-bordered">
                 <tr>
@@ -228,7 +207,7 @@
 
 <div class="container">
     <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-10">
         <h5>Combate de maleza</h5>
         <table class="table table-bordered">
                 <tr>
@@ -260,7 +239,7 @@
 
 <div class="container">
     <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-10">
         <h5>Control de plagas</h5>
         <table class="table table-bordered">
                 <tr>
@@ -292,7 +271,7 @@
 
 <div class="container">
     <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-10">
         <h5>Control de enfermedades</h5>
         <table class="table table-bordered">
                 <tr>
@@ -324,7 +303,7 @@
 
 <div class="container">
     <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-10">
         <h5>Cosecha</h5>
         <table class="table table-bordered">
                 <tr>
@@ -368,7 +347,7 @@
 
 <div class="container">
     <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-10">
         <h5>Flete para siembra</h5>
         <table class="table table-bordered">
                 <tr>
@@ -406,7 +385,7 @@
 
 <div class="container">
     <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-10">
         <h5>Renta de la tierra</h5>
         <table class="table table-bordered">
                 <tr>
@@ -432,7 +411,7 @@
 
 <div class="container">
     <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-10">
         <h5>Costos adicionales</h5>
         <table class="table table-bordered">
                 <tr>
@@ -458,7 +437,7 @@
 
 <div class="container">
     <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-10">
         <h5>Costos adicionales</h5>
         <table class="table table-bordered">
                 <tr>
@@ -502,9 +481,33 @@
         <h5>El cultivo es rentable para el ciclo seleccionado</h5><br> 
     </div>
         <div class="col-md-4">
-            <button type="button" class="btn btn-primary">Descargar reporte</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalServ">Descargar reporte</button>
     </div>
 </div>
+
+<div class="modal fade" id="modalServ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Descargar reporte</h4>
+        </div>
+        <div class="modal-body">
+                  <h4>Seleccione el formato deseado</h4>
+                    <select class="form-control">
+                        <option>PDF</option>
+                        <option>Word</option>
+                        <option>Excel</option>
+                      </select>
+                  <div>Más información, Campo Experimental Zacatecas <br>
+                  <strong>55-38-71-87-00</strong>&nbsp;&nbsp;Ext: <strong>82328, 82337 </strong> <a href="mailto:inifap.zacatecas@inifap.gob.mx; arechiga.delia@inifap.gob.mx">Enviar Correo</a>.</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 @endsection
