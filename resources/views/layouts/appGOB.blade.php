@@ -49,15 +49,7 @@
         </div>
     </nav>
 
-<div class="container">
-    <div class="col-md-12">
-    <ol class="breadcrumb top-buffer">
-        <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a></li>
-        <li><a href="http://www.gob.mx/inifap">Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias</a></li>
-        <li><a href="http://zacatecas.inifap.gob.mx/">Inifap C.E. Zacatecas</a></li>
-        <li><a href="{{ route('inicio') }}">Agrocostos</a></li>
-    </ol>
-</div>
+
 
 </head>
 <body>

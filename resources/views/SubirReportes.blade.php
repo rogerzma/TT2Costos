@@ -1,98 +1,40 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Subir reportes</title>
+@extends('layouts.appGOB')
 
+@section("title", "SubirReportes")
 
-    <!-- CSS -->
-    <link href="/favicon.ico" rel="shortcut icon">
-    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
+@section('content')
 
-    <!-- Respond.js soporte de media queries para Internet Explorer 8 -->
-    <!-- ie8.js EventTarget para cada nodo en Internet Explorer 8 -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/0.2.2/ie8.js"></script>
-    <![endif]-->
+	<div class="container">
+    <div class="col-md-12">
+		<ol class="breadcrumb top-buffer">
+			<li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a></li>
+			<li><a href="http://www.gob.mx/inifap">Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias</a></li>
+			<li><a href="http://zacatecas.inifap.gob.mx/">Inifap C.E. Zacatecas</a></li>
+			<li><a href="{{ route('inicio') }}">Agrocostos</a></li>
+			<li class="active">Ver y modificar reportes</li>
+		</ol></div>
+	</div>
 
-  </head>
-
-  
-
-  <body>
-
-    <!-- Contenido -->
-    <main class="page">
-
-      <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
-                 <span class="sr-only">Interruptor de Navegación</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/"></a>
-              </div>
-              <div class="collapse navbar-collapse" id="subenlaces">
-                <ul class="nav navbar-nav navbar-right">
-            <li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/articulos">Blog</a></li>
-            <li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/multimedia">Multimedia</a></li>
-            <li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/prensa">
-                  Prensa            </a>
-              </li>
-              <li class="landing-btn">
-                      <a href="https://www.gob.mx/inifap/archivo/agenda">
-                    Agenda            </a>
-                </li>
-            <li class="landing-btn">
-                    <a href="https://www.gob.mx/inifap/archivo/acciones_y_programas">
-                  Acciones y programas            </a>
-              </li>
-            <li class="landing-btn">
-                    <a href="https://www.gob.mx/inifap/archivo/documentos">
-                  Documentos            </a>
-              </li>
-              <li class="landing-btn">
-                      <a href="https://vun.inifap.gob.mx/portalweb/_Transparencia">
-                    Transparencia            </a>
-                </li>
-            <li class="landing-btn">
-                    <a href="https://www.gob.mx/agricultura/es/#344">
-                  Contacto            </a>
-              </li>
-              </ul>
-            </div>
-            </div>
-          </nav>
-              
-  
-          <div class="container">
-              <ol class="breadcrumb top-buffer">
-                  <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a></li>
-                  <li><a href="http://www.gob.mx/inifap">Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias</a></li>
-                  <li class="active">Inifap C.E. Zacatecas</li>
-              </ol>
-          </div>
-
-      <div class="container">
-        <h2>Subir reportes</h2>
-        <hr class="red" style="margin-bottom:2em;">
-        
-
+	<div class="container">
         <div class="row">
-          <div class="col-md-8">    
-              <p>
-                <p>La siguiente tabla muestra los diferentes reportes que se muestran en el INIFAP. <br>Usted como administrador puede actualizar o eliminar un reporte.</p>
-                
-              </p></div> 
+			<div class="col-md-9">
+			  <h2>Lista de reportes</h2>
+			  <hr class="red">
+			<p>Aquí se muestran los cultivos registrados para las diferentes operaciones del sistema.</p>
+	
+			</div>
+			<div class="col-md-3">
+				<div class="list-group">
+					<a class="list-group-item" style="text-decoration: none;" href="{{ route('InicioAdministrador') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+					<a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarCultivo') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Registrar cultivo</a>
+					<a class="list-group-item" style="text-decoration: none;" href="{{ route('ListaCultivos') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Lista de cultivos</a>
+					<a class="list-group-item" style="text-decoration: none;" href="{{ route('register') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Registrar usuarios</a>
+				</div>
+			</div>
+		  </div> 
   
               <div class="row">
-                <div class="col-md-10 table-responsive" style="margin-bottom:2em;">
+                <div class="col-md-9 table-responsive" style="margin-bottom:2em;">
                   <table class="table table-bordered table-striped">
                             <tr>
                              <th colspan="2" rowspan=2 style="background:#009933; color:#FFF;">Nombre Común</th>
@@ -113,10 +55,10 @@
                               <td valign="middle">347,323</td>
                               <td valign="middle">&nbsp;</td>
                               <td valign="middle"> 
-                                <a href="#">
+                                <a href="ActualizaReporte">
                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                 </a>
-                                <a href="#">
+                                <a href="#" data-toggle="modal" data-target="#modalServ" style="color:#ff0000;">
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                 </a>
                               </td>
@@ -131,7 +73,7 @@
                                 <a href="ActualizaReporte">
                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                 </a>
-                                <a href="#">
+                                <a href="#" data-toggle="modal" data-target="#modalServ" style="color:#ff0000;">
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                 </a>
                               </td>
@@ -143,10 +85,10 @@
                               <td valign="middle">517,639
                               <td valign="middle">&nbsp;
                                 <td valign="middle"> 
-                                    <a href="#">
+                                    <a href="ActualizaReporte">
                                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                     </a>
-                                    <a href="#">
+                                    <a href="#" data-toggle="modal" data-target="#modalServ" style="color:#ff0000;">
                                         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                     </a>
                                   </td>
@@ -158,10 +100,9 @@
                               <td valign="middle">7,449
                               <td valign="middle">&nbsp;
                                 <td valign="middle"> 
-                                    <a href="#">
-                                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                    <a href="ActualizaReporte" span class="glyphicon glyphicon-pencil" aria-hidden="true">
                                     </a>
-                                    <a href="#">
+                                    <a href="#" data-toggle="modal" data-target="#modalServ" style="color:#ff0000;">
                                         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                     </a>
                                   </td>
@@ -172,38 +113,46 @@
                               <td valign="middle">272,275
                               <td valign="middle">536,775
                               <td valign="middle">&nbsp;
-                            
+                                <td valign="middle"> 
+                                  <a href="ActualizaReporte">
+                                      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                  </a>
+                                  <a href="#" data-toggle="modal" data-target="#modalServ" style="color:#ff0000;">
+                                      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                  </a>
+                                </td>
                             
                           </table>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <br><p>
+                                <a href="{{ route('CreaReporte') }}" button class="btn btn-primary" type="button">Nuevo reporte</a>
+                            </p><br>
+                              </div></div>
               
                 </div>
+
+                <div class="modal fade" id="modalServ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Advertencia</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>El reporte se eliminará definitivamente y no podrá recuperarse, ¿está seguro de continuar?</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Eliminar</button>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
             </div>
       
 
       </div>
-      
-      
-      <div class="collapse navbar-collapse" id="subenlaces">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Enlace</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Desplegable <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Acción</a></li>
-              <li><a href="#">Otra acción</a></li>
-              <li><a href="#">Algo más aquí</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Enlace separado</a></li>
-            </ul>
-          </li>
-           <li><a href="#">Enlace</a></li>
-        </ul>
-      </div>
-    </select>
-    </main>
+	</div>
 
-    <!-- JS -->
-    <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
-
-  </body>
-</html>
+@endsection

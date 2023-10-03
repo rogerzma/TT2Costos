@@ -1,12 +1,24 @@
-@extends('layouts.app')
+@extends('layouts.appGOB')
 
 @section('content')
+
+<div class="container">
+    <ol class="breadcrumb top-buffer">
+        <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a></li>
+        <li><a href="http://www.gob.mx/inifap">Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias</a></li>
+        <li><a href="http://zacatecas.inifap.gob.mx/">Inifap C.E. Zacatecas</a></li>
+        <li><a href="{{ route('inicio') }}">Agrocostos</a></li>
+        <li class="active">Iniciar sesión</li>
+    </ol>
+</div>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-9">
             <div class="card">
                 <div class="card-header">
                     <h2>{{ __('Iniciar sesión') }}</h2>
+                    <hr class="red" style="margin-bottom:2em;">
                     </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -74,11 +86,10 @@
 
             <!--SECCIÓN MODIFICABLE | MENU CONTEXTUAL -->
             <div class="list-group">
-                <a class="list-group-item" style="text-decoration: none;" href="Inicio.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
-                <a class="list-group-item" style="text-decoration: none;" href="Calculadora.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Calculadora</a>
-                <a class="list-group-item" style="text-decoration: none;" href="MapaPotencial.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Mapa de potencial</a>
-                <a class="list-group-item" style="text-decoration: none;" href="Reportes.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Reportes</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Iniciar sesión</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('inicio') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('calculadora') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Calculadora</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('MapaPotencial') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Mapa de potencial</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('filtrado') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Reportes</a>
             </div>
         </div>
 

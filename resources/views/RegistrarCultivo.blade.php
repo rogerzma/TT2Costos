@@ -6,32 +6,62 @@
 
 @section("content")
 
+<div class="container">
+    <ol class="breadcrumb top-buffer">
+        <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a></li>
+        <li><a href="http://www.gob.mx/inifap">Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias</a></li>
+        <li><a href="http://zacatecas.inifap.gob.mx/">Inifap C.E. Zacatecas</a></li>
+        <li><a href="{{ route('inicio') }}">Agrocostos</a></li>
+        <li class="active">Registrar cultivo</li>
+    </ol>
+</div>
+
+<div class="container">
+    <div class="row">
+    <div class="col-md-9">
+        <br><h2>Registrar cultivo</h2>
+        <hr class="red">
+        <h5>Características generales</h5><br> 
+    </div>
+    <div class="col-md-3">
+        <div class="list-group">
+            <a class="list-group-item" style="text-decoration: none;" href="{{ route('InicioAdministrador') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+			<a class="list-group-item" style="text-decoration: none;" href="{{ route('ListaCultivos') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Lista de cultivos</a>
+            <a class="list-group-item" style="text-decoration: none;" href="{{ route('SubirReportes') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Ver y modificar reportes</a>
+            <a class="list-group-item" style="text-decoration: none;" href="{{ route('register') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Registrar usuarios</a>
+        </div>
+    </div>
+    </div>
     <div class="container">
         <div class="row">
-        <div class="col-md-9">
-            <br><h4>Registrar cultivo</h4>
-    <hr class="red">
-
-    <h5>Características generales</h5><br> 
-    
-    <div class="container">
-    <div class="row">
-        <div class="col-md-2 5">
-            <p>Nombre del cultivo</p>
-            <input class="form-control" placeholder="Area de texto" type="text"></div>
-        <div class="col-md-2 5">
-            <p>Nombre del cultivo</p>
-            <input class="form-control" placeholder="Area de texto" type="text"></div>
-        <div class="col-md-2 5">
-            <p>Nombre del cultivo</p>
-            <input class="form-control" placeholder="Area de texto" type="text"></div>
-        <div class="col-md-2 5">
-            <p>Nombre del cultivo</p>
-            <input class="form-control" placeholder="Area de texto" type="text"></div>
-        <div class="col-md-2 5">
-            <p>Nombre del cultivo</p>
-            <input class="form-control" placeholder="Area de texto" type="text"></div>
-    </div>
+            <div class="col-md-2 5">
+                <p>Nombre</p>
+                <input class="form-control" placeholder="Area de texto" type="text"></div>
+            <div class="col-md-2 5">
+                <p>Tipo de cultivo</p>
+                <select class="form-control" placeholder="Area de texto">
+                    <option>Anual</option>
+                    <option>Perenne</option>
+                </select>
+            </div>
+            <div class="col-md-2 5">
+                <p>Modalidad</p>
+                <select class="form-control" placeholder="Area de texto">
+                    <option>Riego</option>
+                    <option>Temporal</option>
+                </select>
+                </div>
+            <div class="col-md-2 5">
+                <p>Ciclo del cultivo</p>
+                <select class="form-control" placeholder="Area de texto">
+                        <option>Primavera-verano</option>
+                        <option>Otoño-invierno</option>
+                    </select>
+                </div>
+            <div class="col-md-2 5">
+                <p>Rendimiento</p>
+                <input class="form-control" placeholder="Area de texto" type="text"></div>
+        </div>
 
     <br><h5>Preparación del terreno</h5><br>
 

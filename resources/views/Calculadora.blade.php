@@ -6,16 +6,32 @@
 
 
 @section("content")
-    <br>
-    <br>
-    <br>
+
+<div class="container">
+    <ol class="breadcrumb top-buffer">
+        <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a></li>
+        <li><a href="http://www.gob.mx/inifap">Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias</a></li>
+        <li><a href="http://zacatecas.inifap.gob.mx/">Inifap C.E. Zacatecas</a></li>
+        <li><a href="{{ route('inicio') }}">Agrocostos</a></li>
+        <li class="active">Calculadora</li>
+    </ol>
+</div>
+
 <div class="container">
         <div class="row">
-        <div class="col-md-8">
-            <h4>Calculadora Agrocostos</h4>
+        <div class="col-md-9">
+            <h2>Calculadora Agrocostos</h2>
             <hr class="red">
             <h5>Seleccione las características del cultivo</h5><br> 
             
+        </div>
+        <div class="col-md-3">
+            <div class="list-group">
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('welcome') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('MapaPotencial') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Mapa de potencial agrícola</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('filtrado') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Reportes</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Modo administrador</a>
+            </div>
         </div>
         
         
@@ -499,10 +515,9 @@
                         <option>Word</option>
                         <option>Excel</option>
                       </select>
-                  <div>Más información, Campo Experimental Zacatecas <br>
-                  <strong>55-38-71-87-00</strong>&nbsp;&nbsp;Ext: <strong>82328, 82337 </strong> <a href="mailto:inifap.zacatecas@inifap.gob.mx; arechiga.delia@inifap.gob.mx">Enviar Correo</a>.</div>
         </div>
         <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Descargar</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         </div>
       </div>

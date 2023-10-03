@@ -1,90 +1,35 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Reportes</title>
+@extends("layouts.appGOB")
 
+@section("title", "MapaPotencial")
 
-    <!-- CSS -->
-    <link href="/favicon.ico" rel="shortcut icon">
-    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
-
-    <!-- Respond.js soporte de media queries para Internet Explorer 8 -->
-    <!-- ie8.js EventTarget para cada nodo en Internet Explorer 8 -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/0.2.2/ie8.js"></script>
-    <![endif]-->
-
-  </head>
-  <body>
+@section('content')
 
     <!-- Contenido -->
-    <main class="page">
-
-      <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
-                 <span class="sr-only">Interruptor de Navegación</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/"></a>
-              </div>
-              <div class="collapse navbar-collapse" id="subenlaces">
-                <ul class="nav navbar-nav navbar-right">
-            <li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/articulos">Blog</a></li>
-            <li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/multimedia">Multimedia</a></li>
-            <li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/prensa">
-                  Prensa            </a>
-              </li>
-              <li class="landing-btn">
-                      <a href="https://www.gob.mx/inifap/archivo/agenda">
-                    Agenda            </a>
-                </li>
-            <li class="landing-btn">
-                    <a href="https://www.gob.mx/inifap/archivo/acciones_y_programas">
-                  Acciones y programas            </a>
-              </li>
-            <li class="landing-btn">
-                    <a href="https://www.gob.mx/inifap/archivo/documentos">
-                  Documentos            </a>
-              </li>
-              <li class="landing-btn">
-                      <a href="https://vun.inifap.gob.mx/portalweb/_Transparencia">
-                    Transparencia            </a>
-                </li>
-            <li class="landing-btn">
-                    <a href="https://www.gob.mx/agricultura/es/#344">
-                  Contacto            </a>
-              </li>
-              </ul>
-            </div>
-            </div>
-          </nav>
-              
-  
-          <div class="container">
-              <ol class="breadcrumb top-buffer">
-                  <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a></li>
-                  <li><a href="http://www.gob.mx/inifap">Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias</a></li>
-                  <li><a href="http://zacatecas.inifap.gob.mx/">Inifap C.E. Zacatecas</a></li>
-                  <li><a href="{{ route('inicio') }}">Agrocostos</a></li>
-                  <li class="active">Reportes</li>
-              </ol>
-          </div>
-
-      <div class="container">
-      <div class="row">
+    <div class="container">
+        <div class="col-md-12">
+        <ol class="breadcrumb top-buffer">
+            <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a></li>
+            <li><a href="http://www.gob.mx/inifap">Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias</a></li>
+            <li><a href="http://zacatecas.inifap.gob.mx/">Inifap C.E. Zacatecas</a></li>
+            <li><a href="{{ route('inicio') }}">Agrocostos</a></li>
+            <li class="active">Reportes</li>
+        </ol></div>
+    </div>
+<div class="container">
+    <div class="row">
         <div class="col-md-9">
           <h2>Reportes</h2>
           <hr class="red">
         <p>Seleccione las características de filtrado para el reporte</p>
 
+        </div>
+        <div class="col-md-3">
+            <div class="list-group">
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('welcome') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('calculadora') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Calculadora</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('MapaPotencial') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Potencial agrícola</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Modo administrador</a>
+            </div>
         </div>
       </div>
       
@@ -435,35 +380,9 @@
                     </table>
         
           </div>
-      </div>
+        </div>
+</div>
+</div>
 
-      
 
-
-      </div>
-      
-      
-      <div class="collapse navbar-collapse" id="subenlaces">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Enlace</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Desplegable <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Acción</a></li>
-              <li><a href="#">Otra acción</a></li>
-              <li><a href="#">Algo más aquí</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Enlace separado</a></li>
-            </ul>
-          </li>
-           <li><a href="#">Enlace</a></li>
-        </ul>
-      </div>
-    </select>
-    </main>
-
-    <!-- JS -->
-    <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
-
-  </body>
-</html>
+@endsection
