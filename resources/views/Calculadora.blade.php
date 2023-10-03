@@ -47,14 +47,14 @@
                         <option>Maiz</option>
                         <option>Chile</option>
                         <option>Tomate</option>
-                      </select>
+                    </select>
         </div>
     <div class="col-md-3">
         <p> Ciclo de cultivo</p>
                 <select class="form-control">
                     <option>P-V</option>
                     <option>O-I</option>
-                  </select>
+                </select>
     </div> 
             <div class="col-md-3">
                 <p>No. de hectareas</p>
@@ -67,7 +67,7 @@
                 <select class="form-control">
                     <option>Riego</option>
                     <option>Temporal</option>
-                  </select>
+                </select>
         </div>
             <div class="col-md-3">
                 <p>Precio por tonelada $ (MXN)</p>
@@ -81,7 +81,7 @@
                     <option>2024</option>
                     <option>2025</option>
                     <option>2026</option>
-                  </select>
+                </select>
         </div>
             <div class="col-md-4">
                 <br>
@@ -503,26 +503,26 @@
 
 <div class="modal fade" id="modalServ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
+    <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Descargar reporte</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Descargar reporte</h4>
         </div>
         <div class="modal-body">
-                  <h4>Seleccione el formato deseado</h4>
+                <h4>Seleccione el formato deseado</h4>
                     <select class="form-control">
                         <option>PDF</option>
                         <option>Word</option>
                         <option>Excel</option>
-                      </select>
+                    </select>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Descargar</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Descargar</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         </div>
-      </div>
     </div>
-  </div>
+    </div>
+</div>
 
 
 @endsection

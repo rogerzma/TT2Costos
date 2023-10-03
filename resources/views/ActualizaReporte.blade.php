@@ -38,7 +38,7 @@
 
     <div class="container">
 
-       <div class="row"> 
+      <div class="row"> 
           <div class="col-md-3">
             <p>
               <p><h4>Nombre del cultivo</h4></p>
@@ -57,9 +57,9 @@
                       <option>Perenne</option>
                     </select>
                 </p></div> 
-       </div>
+      </div>
 
-       <div class="row"> 
+      <div class="row"> 
             <div class="col-md-3">
               <p>
                 <p><h4>Modalidad</h4></p>
@@ -76,9 +76,9 @@
                     <option>Otoño-invierno</option>
                   </select>
             </p></div> 
-     </div>
+    </div>
 
-     <div class="row"> 
+    <div class="row"> 
       <div class="col-md-3">
         <p>
           <p><h4>Potencial alto (hec)</h4></p>
