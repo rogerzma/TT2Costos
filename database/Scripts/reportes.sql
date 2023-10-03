@@ -1,0 +1,1 @@
+SELECT * from reportes where cicloCultivo = 'Temporada de lluvias'

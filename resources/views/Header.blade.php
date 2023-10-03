@@ -80,65 +80,14 @@
     	<div class="container">
         <div class="row">
             <div class="col-md-9">
-                <h2>INIFAP C.E. Zacatecas</h2>
-                <h5>El Campo Experimental Zacatecas (CEZAC) inició sus actividades en el año de 1971 es uno<br>de los 39 campos experimentales estratégicos del INIFAP.</h5>
+                <h2>Subir reportes</h2>
 				<hr class="red" style="margin-bottom:2em;">
 
-                <div class="row">
-                    <div class="col-md-11">
-						<img class="img-responsive img-rounded" style="width: 100%;" src="_images/cezac.JPG">
-                	</div>
-            	</div>
-
-                <div class="row" style="margin-top:1em;">
-                	<div class="col-md-11">
-                  		 <font style="font-weight:bold; margin-right:0.5em;">Red de Monitoreo Agroclimático del Estado de Zacatecas</font><a href="estaciones.php" ><img src="/images/templatemo_entrar.png"></a>
-
-                        <div style="margin-top:1em; margin-bottom:1em;">
-                            <a href="aplicaciones.php"><button type="button" class="btn btn-success" style="font-size: 16px;">Aplicaciones de la Red de Monitoreo</button></a>
-                            <a href="boletines.php">
-                            <button type="button" class="btn btn-warning" style="font-size: 16px;">Boletín Mensual Reciente</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row" style="margin-top:1em;">
-                	 <div class="col-md-7">
-                     	<div style="text-align: justify;">
-                    		Cuenta con 38 estaciones meteorológicas automáticas, cada una está equipada con sensores para medir la temperatura, humedad relativa, precipitación, dirección y velocidad del viento, radiación solar y humedad de la hoja.<br><br>Las mediciones de las condiciones del estado del tiempo se realiza cada 15 minutos.
-		                </div>
-                     </div>
-                     <div class="col-md-3">
-                     	<a href="estaciones.php" ><img title="Red de Monitoreo Agroclimático del Estado de Zacatecas" src="/images/estacion.png" width="301" height="204"></a>
-                     </div>
-                </div>
 
 			</div>
 
-            <div class="col-md-3">
-				<div class="alert alert-success" role="alert">Contacto:<br>
-                TEL: <strong>55-38-71-87-00</strong>&nbsp;&nbsp;<br>Ext: <strong>82328, 82337 </strong><br><a href="mailto:inifap.zacatecas@inifap.gob.mx; arechiga.delia@inifap.gob.mx">Enviar Correo</a></div>
-				 <!--SECCIÓN MODIFICABLE | ACTUALIZACIÓN DE DICHA PÁGINA-->
-                <div class="table-bordered">
-                    <div>
-                        <br>
-                        <small>
-                            &nbsp; &nbsp;
-                            <strong>Autores</strong><br>
-                            &nbsp; &nbsp;
-                            INIFAP - CEZAC - GGM - CAFI
-                            &nbsp; &nbsp;<br>
-                            <span></span>
-                            &nbsp; &nbsp;
-                            <strong>Fecha actualización</strong><br>
-                            &nbsp; &nbsp;
-                            <span>13-09-2023</span>
-                            <br>
-                            <br>
-                        </small>
-                    </div>
-                </div>
-                <br>
+            
+
 
 				
 				<!--<div class="panel-group ficha-collapse" id="accordion">
@@ -164,30 +113,7 @@
                 </div>-->
 
                 <!--SECCIÓN MODIFICABLE | MENU CONTEXTUAL -->
-                <div class="list-group">
-                	<!--<a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalInfo"><img src="/images/templatemo_list.png" style="margin-right:10px;">Información Importante</a>-->
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="potagricola.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Potencial Productivo Agrícola</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="potforrajero.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Potencial Productivo Forrajero</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionest.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Publicaciones Técnicas</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionesc.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Publicaciones Científicas</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="{{ route('inicio') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Agrocostos</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalDir"><img src="/images/templatemo_list.png" style="margin-right:10px;">Directorio</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalServ"><img src="/images/templatemo_list.png" style="margin-right:10px;">Servicios</a>
-                </div>
-
-                <!--SECCIÓN MODIFICABLE | MAPA DE GOOGLE-->
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-11 col-xs-12">
-                        <span id="_mcContenido_lblUbicacion1"><h5>Ubicación</h5></span>
-                        <span id="_mcContenido_lblMap1">
-                            <iframe width="100%" height="auto"
-                                    src="https://www.google.com/maps/embed/v1/place?q=inifap&key=AIzaSyB4UePdvYtsjineIVXT4w8MG-roUoxbnLM" frameborder="0" allowfullscreen="" style="border: 0px currentColor; border-image: none;"></iframe>
-                        </span>
-                    </div>
-                </div>
-                <br>
                 
-            </div>
         </div>
     </div>
  </main>

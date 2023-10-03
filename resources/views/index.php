@@ -1,3 +1,15 @@
+﻿<?php
+include ("api/funciones.php");
+include ("api/api.php");
+include ("api/comun.php");
+include ('visitas/visitas.php');
+
+//header('Access-Control-Allow-Origin: *'); 
+//$version = $_GET['v'];
+
+//reporteAutomatico();
+
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="es">
 <head>
@@ -9,65 +21,13 @@
     <!--NO MODIFICAR-->
     <title>INIFAP C.E. Zacatecas</title>
     
-     
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-HXXJYQTXCE"></script>
-		<script>
-  			window.dataLayer = window.dataLayer || [];
-  			function gtag(){dataLayer.push(arguments);}
-  			gtag('js', new Date());
-
-  			gtag('config', 'G-HXXJYQTXCE');
-		</script>
-			<link rel='stylesheet' type='text/css' href='https://framework-gb.cdn.gob.mx/assets/styles/main.css'>
-		</head>
+    <?php scriptLink();?>
+</head>
 
 <body>
 	<main class="page">
-		
-		<nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
-    	<div class="container">
-        	<div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
-             	<span class="sr-only">Interruptor de Navegación</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="/"></a>
-          	</div>
-          	<div class="collapse navbar-collapse" id="subenlaces">
-            	<ul class="nav navbar-nav navbar-right">
-					<li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/articulos">Blog</a></li>
-					<li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/multimedia">Multimedia</a></li>
-					<li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/prensa">
-								Prensa            </a>
-						</li>
-						<li class="landing-btn">
-										<a href="https://www.gob.mx/inifap/archivo/agenda">
-									Agenda            </a>
-							</li>
-					<li class="landing-btn">
-									<a href="https://www.gob.mx/inifap/archivo/acciones_y_programas">
-								Acciones y programas            </a>
-						</li>
-					<li class="landing-btn">
-									<a href="https://www.gob.mx/inifap/archivo/documentos">
-								Documentos            </a>
-						</li>
-						<li class="landing-btn">
-										<a href="https://vun.inifap.gob.mx/portalweb/_Transparencia">
-									Transparencia            </a>
-							</li>
-					<li class="landing-btn">
-									<a href="https://www.gob.mx/agricultura/es/#344">
-								Contacto            </a>
-						</li>
-					  </ul>
-					</div>
-				  </div>
-				</nav>
-		        <!--NO MODIFICAR-->
+		<?php menuGob(); ?>
+        <!--NO MODIFICAR-->
         <!--SECCIÓN DINÁMICA PARA DETECCIÓN DE LOCALIZACIÓN A TRAVÉS DE breadcrumb-->
         <div class="container">
             <ol class="breadcrumb top-buffer">
@@ -77,7 +37,7 @@
             </ol>
         </div>
         
-    	<div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-md-9">
                 <h2>INIFAP C.E. Zacatecas</h2>
@@ -87,12 +47,12 @@
                 <div class="row">
                     <div class="col-md-11">
 						<img class="img-responsive img-rounded" style="width: 100%;" src="_images/cezac.JPG">
-                	</div>
-            	</div>
+                </div>
+            </div>
 
                 <div class="row" style="margin-top:1em;">
-                	<div class="col-md-11">
-                  		 <font style="font-weight:bold; margin-right:0.5em;">Red de Monitoreo Agroclimático del Estado de Zacatecas</font><a href="estaciones.php" ><img src="/images/templatemo_entrar.png"></a>
+                <div class="col-md-11">
+                  <font style="font-weight:bold; margin-right:0.5em;">Red de Monitoreo Agroclimático del Estado de Zacatecas</font><a href="estaciones.php" ><img src="/images/templatemo_entrar.png"></a>
 
                         <div style="margin-top:1em; margin-bottom:1em;">
                             <a href="aplicaciones.php"><button type="button" class="btn btn-success" style="font-size: 16px;">Aplicaciones de la Red de Monitoreo</button></a>
@@ -103,14 +63,14 @@
                 </div>
 
                 <div class="row" style="margin-top:1em;">
-                	 <div class="col-md-7">
-                     	<div style="text-align: justify;">
-                    		Cuenta con 38 estaciones meteorológicas automáticas, cada una está equipada con sensores para medir la temperatura, humedad relativa, precipitación, dirección y velocidad del viento, radiación solar y humedad de la hoja.<br><br>Las mediciones de las condiciones del estado del tiempo se realiza cada 15 minutos.
-		                </div>
-                     </div>
-                     <div class="col-md-3">
-                     	<a href="estaciones.php" ><img title="Red de Monitoreo Agroclimático del Estado de Zacatecas" src="/images/estacion.png" width="301" height="204"></a>
-                     </div>
+                <div class="col-md-7">
+                    <div style="text-align: justify;">
+                  Cuenta con 38 estaciones meteorológicas automáticas, cada una está equipada con sensores para medir la temperatura, humedad relativa, precipitación, dirección y velocidad del viento, radiación solar y humedad de la hoja.<br><br>Las mediciones de las condiciones del estado del tiempo se realiza cada 15 minutos.
+	</div>
+                    </div>
+                    <div class="col-md-3">
+                    <a href="estaciones.php" ><img title="Red de Monitoreo Agroclimático del Estado de Zacatecas" src="/images/estacion.png" width="301" height="204"></a>
+                    </div>
                 </div>
 
 			</div>
@@ -118,7 +78,7 @@
             <div class="col-md-3">
 				<div class="alert alert-success" role="alert">Contacto:<br>
                 TEL: <strong>55-38-71-87-00</strong>&nbsp;&nbsp;<br>Ext: <strong>82328, 82337 </strong><br><a href="mailto:inifap.zacatecas@inifap.gob.mx; arechiga.delia@inifap.gob.mx">Enviar Correo</a></div>
-				 <!--SECCIÓN MODIFICABLE | ACTUALIZACIÓN DE DICHA PÁGINA-->
+				<!--SECCIÓN MODIFICABLE | ACTUALIZACIÓN DE DICHA PÁGINA-->
                 <div class="table-bordered">
                     <div>
                         <br>
@@ -132,7 +92,7 @@
                             &nbsp; &nbsp;
                             <strong>Fecha actualización</strong><br>
                             &nbsp; &nbsp;
-                            <span>13-09-2023</span>
+                            <span><?php echo date("d-m-Y");?></span>
                             <br>
                             <br>
                         </small>
@@ -153,9 +113,10 @@
                     </div>
 
                     <div class="panel-collapse collapse" id="panel-01">
-                      <!--<div class="panel-body">
-                      	<select class="form-control" id="estaciones">
-                                                </select>
+                      <div class="panel-body">
+                      <select class="form-control" id="estaciones">
+                        <?php //echo opciones(estaciones(),18851); ?>
+                        </select>
                         <div id="output"></div>
                       </div>
                     </div>
@@ -165,12 +126,11 @@
 
                 <!--SECCIÓN MODIFICABLE | MENU CONTEXTUAL -->
                 <div class="list-group">
-                	<!--<a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalInfo"><img src="/images/templatemo_list.png" style="margin-right:10px;">Información Importante</a>-->
+                <!--<a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalInfo"><img src="/images/templatemo_list.png" style="margin-right:10px;">Información Importante</a>-->
                     <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="potagricola.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Potencial Productivo Agrícola</a>
                     <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="potforrajero.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Potencial Productivo Forrajero</a>
                     <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionest.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Publicaciones Técnicas</a>
                     <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionesc.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Publicaciones Científicas</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="{{ route('inicio') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Agrocostos</a>
                     <a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalDir"><img src="/images/templatemo_list.png" style="margin-right:10px;">Directorio</a>
                     <a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalServ"><img src="/images/templatemo_list.png" style="margin-right:10px;">Servicios</a>
                 </div>
@@ -190,8 +150,8 @@
             </div>
         </div>
     </div>
- </main>
- 
+</main>
+
     <div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -201,7 +161,7 @@
           </div>
           <div class="modal-body">
                     <div>Más información, Campo Experimental Zacatecas <br>
-                     <strong>55-38-71-87-00</strong>&nbsp;&nbsp;Ext: <strong>82328, 82337 </strong> <a href="mailto:inifap.zacatecas@inifap.gob.mx; arechiga.delia@inifap.gob.mx">Enviar Correo</a>.</div>
+                    <strong>55-38-71-87-00</strong>&nbsp;&nbsp;Ext: <strong>82328, 82337 </strong> <a href="mailto:inifap.zacatecas@inifap.gob.mx; arechiga.delia@inifap.gob.mx">Enviar Correo</a>.</div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -210,7 +170,7 @@
       </div>
     </div>
 
-     <div class="modal fade" id="modalServ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="modalServ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -218,7 +178,7 @@
             <h4 class="modal-title" id="myModalLabel">Información</h4>
           </div>
           <div class="modal-body">
-           			<h4>Servicios</h4>
+          <h4>Servicios</h4>
                     <h5>
                     <img src="/images/templatemo_list.png" style="margin-right:10px;">Laboratorio de Suelos<br>
                     <img src="/images/templatemo_list.png" style="margin-right:10px;">Laboratorio de Entomología<br>
@@ -244,10 +204,10 @@
             <h4 class="modal-title" id="myModalLabel">Información</h4>
           </div>
           <div class="modal-body">
-          	<table class="table table-bordered" style="font-size:0.8em;">
-            	<tr>
-		  			<td colspan="3" align="center" valign="middle"><p align="center"><strong>Dr. Luis Roberto  Reveles Torres<br>
-		  			  Director de  Coordinación y Vinculación del INIFAP-Zacatecas<br>
+          <table class="table table-bordered" style="font-size:0.8em;">
+            <tr>
+		<td colspan="3" align="center" valign="middle"><p align="center"><strong>Dr. Luis Roberto  Reveles Torres<br>
+		Director de  Coordinación y Vinculación del INIFAP-Zacatecas<br>
   &ldquo;Campo  Experimental Zacatecas&rdquo;</strong></p></td>
 				</tr>
                 <tr>
@@ -373,7 +333,7 @@
 				output = selected.val();
 			}
 
-			 $('#output').load('climatr.php',{est:output});
+			$('#output').load('climatr.php',{est:output});
 
 
 			})
@@ -394,8 +354,7 @@
 	});
 	</script>
     
-    
-			<script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
-		</body>
+    <?php footerN();?>
+</body>
 
 </html>
