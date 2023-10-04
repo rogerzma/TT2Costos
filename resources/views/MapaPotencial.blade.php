@@ -40,7 +40,7 @@
             <option>Maiz</option>
             <option>Chile</option>
             <option>Tomate</option>
-          </select>
+        </select>
         </div>
         </div>
         

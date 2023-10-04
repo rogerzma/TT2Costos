@@ -25,7 +25,7 @@
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Nombre de usuario') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Correo electronico') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -69,7 +69,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Iniciar sesión') }}
                                 </button>
-
+                                <br>
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('¿Olvidaste tu contraseña? Da clic aquí') }}
