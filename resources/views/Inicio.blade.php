@@ -30,14 +30,14 @@
                 </div>
                 </div>
                 <div class="row">
-                <div class="col-md-3">    
-                <p>
-                <a href="{{ route('calculadora') }}" button class="btn btn-default" type="button">Calculadora de costos</a>
-                </p></div> 
             <div class="col-md-3">    
                 <p>
-                <a href="{{ route('MapaPotencial') }}" button class="btn btn-default" type="button">Mapa Potencial</a>
+                <a href="{{ route('calculadora') }}" button class="btn btn-default" type="button">Calculadora de costos</a>
                 </p></div>
+                <div class="col-md-3">    
+                    <p>
+                    <a href="{{ route('MapaPotencial') }}" button class="btn btn-default" type="button">Mapa Potencial</a>
+                    </p></div>
             <div class="col-md-3">    
                 <p>
                     <a href="{{ route('filtrado') }}" button class="btn btn-default" type="button">Reportes</a>

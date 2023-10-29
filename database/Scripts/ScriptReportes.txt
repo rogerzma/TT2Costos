@@ -35,3 +35,19 @@ VALUES('Ajo','Allium sativum L.','Anual','Riego','Otoño-invierno','351,494', '3
 	  ('Pitayo','Stenocereus queretaroensis (Weber) Buxbaum','Perenne','Temporal','Primavera','40,471', '28,995','0', pg_read_binary_file('C:\xampp\htdocs\TT2Costos\public\PotAgric\PitayoT.pdf')),
 	  ('Sorgo','Sorghum bicolor L. Moench','Anual','Riego','Primavera-verano','233,656', '405,059','0', pg_read_binary_file('C:\xampp\htdocs\TT2Costos\public\PotAgric\SorgoR.pdf')),
 	  ('Sorgo','Sorghum bicolor L. Moench','Anual','Temporal','Primavera-verano','3,890', '47,158','0', pg_read_binary_file('C:\xampp\htdocs\TT2Costos\public\PotAgric\SorgoT.pdf'));
+
+public function up()
+    {
+        Schema::create('reportes', function (Blueprint $table) {
+            $table->id('idReporte');
+            $table->string('nombrecultivo',45);
+            $table->string('nombrecientifico',45);
+            $table->string('tipocultivo',45);
+            $table->string('modalidad',45);
+            $table->string('ciclocultivo',45);
+            $table->string('potencialalto',30);
+            $table->string('potencialmedio',30);
+            $table->string('potencialbajo',30);
+            $table->binary('pdf');
+        });
+    }

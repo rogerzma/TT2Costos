@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <!--NO MODIFICAR-->
     <title>INIFAP C.E. Zacatecas</title>
@@ -12,6 +13,8 @@
     <!-- CSS -->
     <link href="/favicon.ico" rel="shortcut icon">
     <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
+    <link href="{{ asset('css/estilos.css') }}" rel="stylesheet">
+
 
     <!-- Respond.js soporte de media queries para Internet Explorer 8 -->
     <!-- ie8.js EventTarget para cada nodo en Internet Explorer 8 -->
@@ -50,7 +53,6 @@
     </nav>
 
 
-
 </head>
 <body>
 
@@ -58,6 +60,8 @@
 
     <!-- JS -->
     <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 </body>
 </html>

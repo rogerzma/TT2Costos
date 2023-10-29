@@ -38,26 +38,26 @@
     <div class="row">
         <div class="col-md-2 5">
             <p>Nombre</p>
-            <input class="form-control" placeholder="Area de texto" type="text"></div>
-        <div class="col-md-2 5">
-            <p>Tipo de cultivo</p>
-            <select class="form-control" placeholder="Area de texto">
-                <option>Anual</option>
-                <option>Perenne</option>
-            </select>
-        </div>
+            <input class="form-control" placeholder="Area de texto" type="text" value="{{ $cultivo->nombre }}"></div>
+            <div class="col-md-2 5">
+                <p>Tipo de cultivo</p>
+                <select class="form-control" name="tipo">
+                    <option value="Anual" {{ $cultivo->tipo == "Anual" ? 'selected' : '' }}>Anual</option>
+                    <option value="Perenne" {{ $cultivo->tipo == "Perenne" ? 'selected' : '' }}>Perenne</option>
+                </select>
+            </div>
         <div class="col-md-2 5">
             <p>Modalidad</p>
-            <select class="form-control" placeholder="Area de texto">
-                <option>Riego</option>
-                <option>Temporal</option>
+            <select class="form-control" name="modalidad">
+                <option value="Riego" {{ $cultivo->tipo == "Riego" ? 'selected' : '' }}>Riego</option>
+                <option value="Temporal" {{ $cultivo->tipo == "Temporal" ? 'selected' : '' }}>Temporal</option>
             </select>
             </div>
         <div class="col-md-2 5">
             <p>Ciclo del cultivo</p>
-            <select class="form-control" placeholder="Area de texto">
-                    <option>Primavera-verano</option>
-                    <option>Otoño-invierno</option>
+            <select class="form-control" name="ciclo">
+                    <option value="Primavera-verano" {{ $cultivo->tipo == "Primavera-verano" ? 'selected' : '' }}>Primavera-verano</option>
+                    <option value="Otoño-invierno" {{ $cultivo->tipo == "Otoño-invierno" ? 'selected' : '' }}>Otoño-invierno</option>
                 </select>
             </div>
         <div class="col-md-2 5">
