@@ -28,14 +28,17 @@ Route::view('/Header', 'Header')->name('Header');
 Route::view('/Calculadora', 'Calculadora')->name('calculadora');
 Route::view('/MapaPotencial', 'MapaPotencial')->name('MapaPotencial');
 Route::view('/filtrado', 'filtrado')->name('filtrado');
-Route::view('/RegistrarCultivo', 'RegistrarCultivo')->name('RegistrarCultivo');
-Route::view('/InicioAdministrador', 'InicioAdministrador')->name('InicioAdministrador');
-Route::view('/SubirReportes', 'SubirReportes')->name('SubirReportes');
-Route::view('/ListaCultivos', 'ListaCultivos')->name('ListaCultivos');
-Route::view('/ActualizaCultivo', 'ActualizaCultivo')->name('ActualizaCultivo');
 Route::view('/welcome', 'welcome')->name('welcome');
-Route::view('/ActualizaReporte', 'ActualizaReporte')->name('ActualizaReporte');
-Route::view('/CreaReporte', 'CreaReporte')->name('CreaReporte');
 Route::view('/prueba', 'prueba')->name('prueba');
 
 
+Route::middleware(['restrictAccess'])->group(function () {
+    // Rutas restringidas
+    Route::get('/RegistrarCultivo', 'TuControlador@metodoRegistrarCultivo')->name('RegistrarCultivo');
+    Route::get('/InicioAdministrador', 'TuControlador@metodoInicioAdministrador')->name('InicioAdministrador');
+    Route::get('/SubirReportes', 'TuControlador@metodoSubirReportes')->name('SubirReportes');
+    Route::get('/ListaCultivos', 'TuControlador@metodoListaCultivos')->name('ListaCultivos');
+    Route::get('/ActualizaCultivo', 'TuControlador@metodoActualizaCultivo')->name('ActualizaCultivo');
+    Route::get('/ActualizaReporte', 'TuControlador@metodoActualizaReporte')->name('ActualizaReporte');
+    Route::get('/CreaReporte', 'TuControlador@metodoCreaReporte')->name('CreaReporte');
+});
