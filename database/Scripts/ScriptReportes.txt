@@ -36,18 +36,83 @@ VALUES('Ajo','Allium sativum L.','Anual','Riego','Otoño-invierno','351,494', '3
 	  ('Sorgo','Sorghum bicolor L. Moench','Anual','Riego','Primavera-verano','233,656', '405,059','0', pg_read_binary_file('C:\xampp\htdocs\TT2Costos\public\PotAgric\SorgoR.pdf')),
 	  ('Sorgo','Sorghum bicolor L. Moench','Anual','Temporal','Primavera-verano','3,890', '47,158','0', pg_read_binary_file('C:\xampp\htdocs\TT2Costos\public\PotAgric\SorgoT.pdf'));
 
+--NOTA. Para poder hacer que funcione, hay que descargar la carpeta PotAgric, cambiarla a la carpeta public del proyecto de laravel y actualizar la ruta--
+
 public function up()
     {
         Schema::create('reportes', function (Blueprint $table) {
             $table->id('idReporte');
             $table->string('nombrecultivo',45);
-            $table->string('nombrecientifico',45);
+            $table->string('nombrecientifico',60);
             $table->string('tipocultivo',45);
             $table->string('modalidad',45);
             $table->string('ciclocultivo',45);
-            $table->string('potencialalto',30);
-            $table->string('potencialmedio',30);
-            $table->string('potencialbajo',30);
+            $table->string('potencialalto',45);
+            $table->string('potencialmedio',45);
+            $table->string('potencialbajo',45);
             $table->binary('pdf');
+            $table->timestamps();
         });
     }
+
+--Para la tabla de cultivos--
+
+public function up()
+    {
+        Schema::create('cultivo', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre',30);
+            $table->string('tipo',30);
+            $table->string('modalidad',30);
+            $table->string('ciclo',30);
+            $table->decimal('rendimiento');
+            $table->rememberToken();
+            $table->timestamps();
+        });
+    }
+
+Para la tabla de costos: 
+    public function up()
+    {
+        Schema::create('costos', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('cultivo_id');
+            $table->foreign('cultivo_id')->references('id')->on('cultivo')->onDelete('cascade');
+            $table->string('concepto',30);
+            $table->string('insumo',30);
+            $table->string('unidad',30);
+            $table->string('cantidad',30);
+            $table->decimal('precio');
+            $table->timestamps();
+        });
+    }
+
+--SCRIPT PARA CULTIVO FRIJOL--
+
+INSERT INTO cultivo(nombre, tipo, modalidad, ciclo, rendimiento)
+VALUES ('Frijol', 'Anual', 'Temporal', 'Primavera-verano', 1.1),
+
+INSERT INTO costos (cultivo_id, concepto, insumo, unidad, cantidad, precio)
+VALUES (1, 'Preparación del terreno', 'Subsuelo', 'Jornal', '1', 1200.0),
+(1, 'Preparación del terreno', 'Barbecho', 'Jornal', '0', 0),
+(1, 'Preparación del terreno', 'Rastra', 'Jornal', '1', 700),
+(1, 'Preparación del terreno', 'Otro', '-', '0', 0),
+(1, 'Siembra', 'Semilla', 'Kilogramo', '35', 19.0),
+(1, 'Siembra', 'Siembra', 'Jornal', '1', 250.0),
+(1, 'Fertilización', 'Fertilizante (opción 1)', 'Kilogramo (Nitrato de amonio)', '90', 26.24),
+(1, 'Fertilización', 'Fertilizante (opción 1)', 'Kilogramo (Superfosfato de calcio triple)', '108', 17.0),
+(1, 'Fertilización', 'Mano de obra', 'Jornal', '1', 250),
+(1, 'Combate de maleza', 'Producto 1 (Flex)', 'Litros', '1', 850),
+(1, 'Combate de maleza', 'Mano de obra', 'Jornal', '1', 250),
+(1, 'Control de plagas', 'Producto 1 (Selexone)', 'Litros', '1', 450),
+(1, 'Control de plagas', 'Mano de obra', 'Jornal', '1', 250),
+(1, 'Control de enfermedades', 'Producto 1 (Cupravit)', 'Litros', '1', 350),
+(1, 'Control de enfermedades', 'Mano de obra', 'Jornal', '1', 250),
+(1, 'Cosecha', 'Costales', 'Pieza', '25', 6),
+(1, 'Cosecha', 'Mano de obra', 'Jornal', '4', 250),
+(1, 'Cosecha', 'Tractorista (aflojado)', 'Jornal', '1', 250),
+(1, 'Cosecha', 'Trilla', 'Jornal', '5', 250),
+(1, 'Flete para siembra', 'Flete para siembra', 'Servicio', '1', 100),
+(1, 'Flete para siembra', 'Flete para cosecha', 'Servicio', '1', 100),
+(1, 'Flete para siembra', 'Flete para recoger insumos', 'Servicio', '1', 100),
+(1, 'Renta de la tierra', 'Renta de la tierra', 'Servicio', '1', 100);

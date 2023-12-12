@@ -86,7 +86,7 @@
 
                 <div class="row">
                     <div class="col-md-11">
-						<img class="img-responsive img-rounded" style="width: 100%;" src="_images/cezac.JPG">
+						<img class="img-responsive img-rounded" style="width: 100%;" src="images/cezac.png">
                 	</div>
             	</div>
 

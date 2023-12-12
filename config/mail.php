@@ -92,8 +92,23 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+    'address' => env('MAIL_FROM_ADDRESS', 'example@example.com'),
+    'name' => env('MAIL_FROM_NAME', 'Example'),
+    ],
+
+    'to' => [
+        'address1@example.com',
+        'address2@example.com',
+    ],
+
+    'smtp' => [
+        'transport' => 'smtp',
+        'host' => env('MAIL_HOST', 'sandbox.smtp.mailtrap.io'),
+        'port' => env('MAIL_PORT', 2525),
+        'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+        'username' => env('MAIL_USERNAME', 'your_mailtrap_username'),
+        'password' => env('MAIL_PASSWORD', 'your_mailtrap_password'),
+        'timeout' => null,
     ],
 
     /*

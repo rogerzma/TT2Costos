@@ -26,7 +26,7 @@
         <div class="col-md-3">
             <div class="list-group">
                 <a class="list-group-item" style="text-decoration: none;" href="{{ route('welcome') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('calculadora') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Calculadora</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('Calculadora') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Calculadora</a>
                 <a class="list-group-item" style="text-decoration: none;" href="{{ route('MapaPotencial') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Potencial agrícola</a>
                 <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Modo administrador</a>
             </div>
@@ -84,7 +84,6 @@
     <div class="row">
         <div class="col-md-10 table-responsive" style="margin-bottom: 2em;">
             <br>
-            @if($reportesRiego->count() > 0)
             <div class="row">
                 <div class="col-md-11">
                     <span>
@@ -111,9 +110,11 @@
                         <th style="background:#009933; color:#FFF;">Medio</th>
                         <th style="background:#009933; color:#FFF;">Bajo</th>
                     </tr>
+                    @if($reportesRiego->count() > 0)
                     <tr>
                         <th colspan="6" style="background:#cc6600; color:#FFF;">RIEGO</th>
                     </tr>
+                    
                     @foreach ($reportesRiego as $reporte)
                         <tr>
                             <td align="center" valign="middle">
@@ -127,22 +128,23 @@
                         </tr>
                     @endforeach
             @endif
-    
             @if($reportesTemporal->count() > 0)
-                    <th colspan="6" style="background:#cc6600; color:#FFF;">TEMPORAL</th>
-                    </tr>
-                    @foreach ($reportesTemporal as $reporte)
-                        <tr>
-                            <td align="center" valign="middle">
-                                <a href="{{ route('descargar.pdf', ['id' => $reporte->id]) }}"><img border="0" src="images/PDF.png" /></a>
-                            </td>
-                            <td valign="middle">{{ $reporte->nombrecultivo }}</td>
-                            <td valign="middle"><i>{{ $reporte->nombrecientifico }}</i> L.</td>
-                            <td valign="middle">{{ $reporte->potencialalto }}</td>
-                            <td valign="middle">{{ $reporte->potencialmedio }}</td>
-                            <td valign="middle">{{ $reporte->potencialbajo }}</td>
-                        </tr>
-                    @endforeach
+            <tr>
+                <th colspan="6" style="background:#cc6600; color:#FFF;">Temporal</th>
+            </tr>
+            
+            @foreach ($reportesTemporal as $reporte)
+                <tr>
+                    <td align="center" valign="middle">
+                        <a href="{{ route('descargar.pdf', ['id' => $reporte->id]) }}"><img border="0" src="images/PDF.png" /></a>
+                    </td>
+                    <td valign="middle">{{ $reporte->nombrecultivo }}</td>
+                    <td valign="middle"><i>{{ $reporte->nombrecientifico }}</i> L.</td>
+                    <td valign="middle">{{ $reporte->potencialalto }}</td>
+                    <td valign="middle">{{ $reporte->potencialmedio }}</td>
+                    <td valign="middle">{{ $reporte->potencialbajo }}</td>
+                </tr>
+            @endforeach
                 </table>
                 @else
                 <p>No existen reportes para los filtros seleccionados.</p>

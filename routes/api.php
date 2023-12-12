@@ -4,9 +4,13 @@ use App\Http\Controllers\appControlador;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\reporteControlador;
 use App\Http\Controllers\cultivoControlador;
+use App\Http\Controllers\CalculadoraControlador;
 use App\Http\Controllers\reporteController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Barryvdh\DomPDF\Facade as PDF;
+use App\Http\Controllers\CustomRegisterController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -41,5 +45,10 @@ Route::get('/editar-reporte/{id}', [reporteControlador::class, 'edit'])->name('e
 Route::get('/editar-cultivo/{id}', [cultivoControlador::class, 'edit'])->name('editar.cultivo');
 Route::get('/lista-cultivos', [cultivoControlador::class, 'get'])->name('lista.cultivos');
 Route::post('/crear-cultivo', [cultivoControlador::class, 'create'])->name('crear.cultivo');
+Route::post('/guardar-cultivo', [cultivoControlador::class, 'store'])->name('guardar.cultivo');
 Route::post('/crear-costo', [cultivoControlador::class, 'createCosto'])->name('crear.costo');
+Route::post('/calcular-costo', [CalculadoraControlador::class, 'index'])->name('calcular.costo');
+Route::post('/registrar-usuario', [CustomRegisterController::class, 'registrarUsuario'])->name('registrar.usuario');
 Route::delete('/eliminar-cultivo/{id}', [cultivoControlador::class, 'delete'])->name('eliminar.cultivo');
+Route::match(['get', 'post'], '/crear-pdf', [CalculadoraControlador::class, 'pdf'])->name('crear.pdf');
+

@@ -22,7 +22,7 @@
         <div class="col-md-9">
             <h2>Calculadora Agrocostos</h2>
             <hr class="red">
-            <h5>Seleccione las características del cultivo</h5><br> 
+            <h4>Seleccione las características del cultivo</h4><br> 
             
         </div>
         <div class="col-md-3">
@@ -40,489 +40,117 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
-            <p>Cultivo</p>
-                    <select class="form-control">
-                        <option>Frijol</option>
-                        <option>Maiz</option>
-                        <option>Chile</option>
-                        <option>Tomate</option>
-                      </select>
+        <form action="{{ route('calcular.costo') }}" method="post">
+         @csrf
+         <div class="col-md-3">
+            <p><h5>Cultivo</h5></p>
+            <select class="form-control" id="nombre" name="nombre">
+                <option value="" disabled selected>Seleccione un cultivo</option>
+                @foreach ($nombresUnicos as $nombreUnico)
+                    <option value="{{ $nombreUnico }}">{{ $nombreUnico }}</option>
+                @endforeach
+            </select>
         </div>
-    <div class="col-md-3">
-        <p> Ciclo de cultivo</p>
-                <select class="form-control">
-                    <option>P-V</option>
-                    <option>O-I</option>
-                  </select>
-    </div> 
-            <div class="col-md-3">
-                <p>No. de hectareas</p>
-                <input class="form-control" placeholder="Ingrese las hectareas a calcular" type="text">
-            </div>
+        <div class="col-md-3">
+            <p><h5>Ciclo de cultivo</h5></p>
+            <select class="form-control" id="ciclo" name="ciclo">
+                <option value="" disabled selected>Seleccione un ciclo de cultivo</option>
+                <option value="Primavera-verano">Primavera-verano</option>
+                <option value="Otoño-invierno">Otoño-invierno</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <p><h5>No. de hectáreas</h5></p>
+            <input class="form-control" id="hectareas" name="hectareas" placeholder="Ingrese las hectáreas a calcular" type="text">
+        </div>
     </div><br>
     <div class="row">
         <div class="col-md-3">
-            <p>Modalidad</p>
-                <select class="form-control">
-                    <option>Riego</option>
-                    <option>Temporal</option>
-                  </select>
+            <p><h5>Modalidad</h5></p>
+            <select class="form-control" id="modalidad" name="modalidad">
+                <option value="" disabled selected>Seleccione la modalidad</option>
+                <option value="Riego">Riego</option>
+                <option value="Temporal">Temporal</option>
+            </select>
         </div>
-            <div class="col-md-3">
-                <p>Precio por tonelada $ (MXN)</p>
-                <input class="form-control" placeholder="Ingrese el precio de cada tonelada" type="text">
-            </div>
+        <div class="col-md-3">
+            <p><h5>Precio por tonelada $ (MXN)</h5></p>
+            <input class="form-control" id="precio_tonelada" name="precio_tonelada" placeholder="Ingrese el precio de cada tonelada" type="text">
+        </div>
     </div><br>
     <div class="row">
         <div class="col-md-5">
-            <p>Si desea proyectar los costos a futuro, seleccione un año</p>
-                <select class="form-control" placeholder="Seleccione el año">
-                    <option>2024</option>
-                    <option>2025</option>
-                    <option>2026</option>
-                  </select>
+            <p><h5>Si desea proyectar los costos a futuro, seleccione un año</h5></p>
+            <select class="form-control" id="ano_proyeccion" name="ano_proyeccion">
+                <option value="" disabled selected>Seleccione un año de proyección</option>
+                <option value="ninguno">Ninguno</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+            </select>
         </div>
-            <div class="col-md-4">
-                <br>
-                <button type="button" class="btn btn-primary">Calcular</button>
-            </div>
+        <div class="col-md-4">
+            <br>
+            <button type="submit" class="btn btn-primary" id="calcularButton">Calcular</button>
+        </div>
+    </form>
     </div>
 </div><br>
 
-<div class="container">
-    <div class="row">
-    <div class="col-md-10">
-        <h3>Resultado</h3>
-        <h5>información del cultvo</h5>
-        <table class="table table-bordered">
-                <tr>
-                    <td>Nombre</td>
-                    <td>Tipo de cultivo</td>
-                    <td>Modalidad</td>
-                    <td>Ciclo de cultivo</td>
-                </tr>
-                <tr>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>    
-        </table> 
-    </div>
-    </div>
 </div>
 
-<div class="container">
-    <div class="row">
-    <div class="col-md-10">
-        <h5>Preparación del terreno</h5>
-        <table class="table table-bordered">
-                <tr>
-                    <td>Concepto</td>
-                    <td>Unidad</td>
-                    <td>Cantidad</td>
-                    <td>Costo unitario</td>
-                </tr>
-                <tr>
-                    <td>Subsuelo</td>
-                    <td>Jornal</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <td>Barbacha</td>
-                    <td>Jornal</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <td>Rastra</td>
-                    <td>Jornal</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <td>Otro</td>
-                    <td>Jornal</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>  
-                <tr>
-                    <th colspan="3">Subtotal</th>
-                    <th>$</th>
-                </tr>    
-        </table> 
-    </div>
-    </div>
-</div>
+<script type="text/javascript">
+    function validarFormulario() {
+        var errores = []; // Array para registrar los errores
 
-<div class="container">
-    <div class="row">
-    <div class="col-md-10">
-        <h5>Siembra</h5>
-        <table class="table table-bordered">
-                <tr>
-                    <td>Concepto</td>
-                    <td>Unidad</td>
-                    <td>Cantidad</td>
-                    <td>Costo unitario</td>
-                </tr>
-                <tr>
-                    <td>Semilla</td>
-                    <td>Jornal</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <td>Siembra</td>
-                    <td>Jornal</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>  
-                <tr>
-                    <th colspan="3">Subtotal</th>
-                    <th>$</th>
-                </tr>    
-        </table> 
-    </div>
-    </div>
-</div>
+        // Obtener los valores de los campos del formulario
+        var nombre = document.querySelector("input[name='nombre']").value;
+        var ciclo = document.querySelector("select[name='ciclo']").value;
+        var hectareas = document.querySelector("select[name='hectareas']").value;
+        var modalidad = document.querySelector("select[name='modalidad']").value;
+        var precio_tonelada = document.querySelector("input[name='precio_tonelada']").value;
 
-<div class="container">
-    <div class="row">
-    <div class="col-md-10">
-        <h5>Fertilización</h5>
-        <table class="table table-bordered">
-                <tr>
-                    <td>Concepto</td>
-                    <td>Unidad</td>
-                    <td>Cantidad</td>
-                    <td>Costo unitario</td>
-                </tr>
-                <tr>
-                    <td>Fertilizante</td>
-                    <td>Jornal</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <td>Mano de obra</td>
-                    <td>Jornal</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>  
-                <tr>
-                    <th colspan="3">Subtotal</th>
-                    <th>$</th>
-                </tr>    
-        </table> 
-    </div>
-    </div>
-</div>
+        // Validar cada campo según tus criterios y registrar los errores
+        if (nombre.trim() === "") {
+            errores.push("Nombre");
+        }
+        if (ciclo === "") {
+            errores.push("Ciclo");
+        }
+        if (hectareas === "") {
+            errores.push("Hectáreas");
+        }
+        if (modalidad === "") {
+            errores.push("Modalidad");
+        }
+        if (precio_tonelada.trim() === "") {
+            errores.push("Precio por tonelada");
+        } else {
+            // Validar si el rendimiento no es numérico
+            if (isNaN(precio_tonelada)) {
+                errores.push("El valor del precio de tonelada no es numérico");
+            }
+            if (isNaN(hectareas)) {
+                errores.push("El valor de hectáreas no es numérico");
+            }
+        }
 
-<div class="container">
-    <div class="row">
-    <div class="col-md-10">
-        <h5>Combate de maleza</h5>
-        <table class="table table-bordered">
-                <tr>
-                    <td>Concepto</td>
-                    <td>Unidad</td>
-                    <td>Cantidad</td>
-                    <td>Costo unitario</td>
-                </tr>
-                <tr>
-                    <td>Producto</td>
-                    <td>Jornal</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <td>Mano de obra</td>
-                    <td>Jornal</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>  
-                <tr>
-                    <th colspan="3">Subtotal</th>
-                    <th>$</th>
-                </tr>    
-        </table> 
-    </div>
-    </div>
-</div>
+        // Verificar si hay errores y mostrar el alert
+        if (errores.length > 0) {
+            var mensaje = "Falta información o la información ingresada no es válida en los siguientes campos:\n\n";
+            for (var i = 0; i < errores.length; i++) {
+                mensaje += "- " + errores[i] + "\n";
+            }
+            alert(mensaje);
+            return false; // Evita que el formulario se envíe
+        }
 
-<div class="container">
-    <div class="row">
-    <div class="col-md-10">
-        <h5>Control de plagas</h5>
-        <table class="table table-bordered">
-                <tr>
-                    <td>Concepto</td>
-                    <td>Unidad</td>
-                    <td>Cantidad</td>
-                    <td>Costo unitario</td>
-                </tr>
-                <tr>
-                    <td>Producto</td>
-                    <td>Jornal</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <td>Mano de obra</td>
-                    <td>Jornal</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>  
-                <tr>
-                    <th colspan="3">Subtotal</th>
-                    <th>$</th>
-                </tr>    
-        </table> 
-    </div>
-    </div>
-</div> 
+        // Aquí puedes agregar más validaciones y errores si es necesario
 
-<div class="container">
-    <div class="row">
-    <div class="col-md-10">
-        <h5>Control de enfermedades</h5>
-        <table class="table table-bordered">
-                <tr>
-                    <td>Concepto</td>
-                    <td>Unidad</td>
-                    <td>Cantidad</td>
-                    <td>Costo unitario</td>
-                </tr>
-                <tr>
-                    <td>Producto</td>
-                    <td>Jornal</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <td>Mano de obra</td>
-                    <td>Jornal</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>  
-                <tr>
-                    <th colspan="3">Subtotal</th>
-                    <th>$</th>
-                </tr>    
-        </table> 
-    </div>
-    </div>
-</div> 
-
-<div class="container">
-    <div class="row">
-    <div class="col-md-10">
-        <h5>Cosecha</h5>
-        <table class="table table-bordered">
-                <tr>
-                    <td>Concepto</td>
-                    <td>Unidad</td>
-                    <td>Cantidad</td>
-                    <td>Costo unitario</td>
-                </tr>
-                <tr>
-                    <td>Costales</td>
-                    <td>Pieza</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <td>Mano de obra</td>
-                    <td>Jornal</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <td>Tractorista</td>
-                    <td>Pieza</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <td>Trilla</td>
-                    <td>Pieza</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>  
-                <tr>
-                    <th colspan="3">Subtotal</th>
-                    <th>$</th>
-                </tr>    
-        </table> 
-    </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-    <div class="col-md-10">
-        <h5>Flete para siembra</h5>
-        <table class="table table-bordered">
-                <tr>
-                    <td>Concepto</td>
-                    <td>Unidad</td>
-                    <td>Cantidad</td>
-                    <td>Costo unitario</td>
-                </tr>
-                <tr>
-                    <td>Flete para siembra</td>
-                    <td>Pieza</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <td>Flete para cosecha</td>
-                    <td>Jornal</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <td>Flete para consumir insumos</td>
-                    <td>Pieza</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr> 
-                <tr>
-                    <th colspan="3">Subtotal</th>
-                    <th>$</th>
-                </tr>    
-        </table> 
-    </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-    <div class="col-md-10">
-        <h5>Renta de la tierra</h5>
-        <table class="table table-bordered">
-                <tr>
-                    <td>Concepto</td>
-                    <td>Unidad</td>
-                    <td>Cantidad</td>
-                    <td>Costo unitario</td>
-                </tr>
-                <tr>
-                    <td>Renta de la tierra</td>
-                    <td>Servicio</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <th colspan="3">Subtotal</th>
-                    <th>$</th>
-                </tr>    
-        </table> 
-    </div>
-    </div>
-</div> 
-
-<div class="container">
-    <div class="row">
-    <div class="col-md-10">
-        <h5>Costos adicionales</h5>
-        <table class="table table-bordered">
-                <tr>
-                    <td>Concepto</td>
-                    <td>Unidad</td>
-                    <td>Cantidad</td>
-                    <td>Costo unitario</td>
-                </tr>
-                <tr>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <th colspan="3">Subtotal</th>
-                    <th>$</th>
-                </tr>    
-        </table> 
-    </div>
-    </div>
-</div> 
-
-<div class="container">
-    <div class="row">
-    <div class="col-md-10">
-        <h5>Costos adicionales</h5>
-        <table class="table table-bordered">
-                <tr>
-                    <td>Concepto</td>
-                    <td>Precio</td>
-                </tr>
-                <tr>
-                    <td>Costo total</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <td>Rendimiento</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <td>Precio</td>
-                    <td>$</td>
-                </tr>
-                <tr>
-                    <td>Ingreso bruto</td>
-                    <td>$</td>
-                </tr>   
-                <tr>
-                    <td>Ingreso neto</td>
-                    <td>$</td>
-                </tr>   
-                <tr>
-                    <td>Relación costo-beneficio</td>
-                    <td>$</td>
-                </tr>   
-        </table> 
-    </div>
-    </div>
-</div> 
-
-<div class="container">
-    <h4>Semáforo de rentabilidad</h4>
-    <p>aqui va el semaforo</p>
-    <div class="row">
-    <div class="col-md-8">
-        <h5>El cultivo es rentable para el ciclo seleccionado</h5><br> 
-    </div>
-        <div class="col-md-4">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalServ">Descargar reporte</button>
-    </div>
-</div>
-
-<div class="modal fade" id="modalServ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Descargar reporte</h4>
-        </div>
-        <div class="modal-body">
-                  <h4>Seleccione el formato deseado</h4>
-                    <select class="form-control">
-                        <option>PDF</option>
-                        <option>Word</option>
-                        <option>Excel</option>
-                      </select>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Descargar</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
+        return true; // Permite que el formulario se envíe
+    }
+</script>
 @endsection
