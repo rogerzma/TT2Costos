@@ -6,7 +6,7 @@
 
 	<div class="container">
 
-    
+
     <div class="col-md-12">
 		<ol class="breadcrumb top-buffer">
 			<li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a></li>
@@ -28,17 +28,17 @@
 			  <h2>Lista de reportes</h2>
 			  <hr class="red">
 			<p>Aquí se muestran los cultivos registrados para las diferentes operaciones del sistema.</p>
-	
+
 			</div>
 			<div class="col-md-3">
 				<div class="list-group">
-					<a class="list-group-item" style="text-decoration: none;" href="{{ route('InicioAdministrador') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
-					<a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarCultivo') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Registrar cultivo</a>
-					<a class="list-group-item" style="text-decoration: none;" href="{{ route('ListaCultivos') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Lista de cultivos</a>
-					<a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarUsuario') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Registrar usuarios</a>
+					<a class="list-group-item" style="text-decoration: none;" href="{{ route('InicioAdministrador') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+					<a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarCultivo') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Registrar cultivo</a>
+					<a class="list-group-item" style="text-decoration: none;" href="{{ route('ListaCultivos') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Lista de cultivos</a>
+					<a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarUsuario') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Registrar usuarios</a>
 				</div>
 			</div>
-		  </div> 
+		  </div>
               <div class="row">
                 <div class="col-md-9 table-responsive" style="margin-bottom:2em;">
                     <table class="table table-bordered table-striped">
@@ -54,7 +54,7 @@
                             <th style="background:#009933; color:#FFF;">Medio</th>
                             <th style="background:#009933; color:#FFF;">Bajo</th>
                         </tr>
-                    
+
                         @foreach($reportes as $reporte)
                           <tr>
                               <td align="center" valign="middle">
@@ -87,7 +87,7 @@
                                 <a href="{{ route('CreaReporte') }}" button class="btn btn-primary" type="button">Nuevo reporte</a>
                             </p><br>
                               </div></div>
-              
+
                 </div>
 
                 @foreach($reportes as $reporte)
@@ -115,10 +115,10 @@
 
                   @endforeach
             </div>
-      
+
 
       </div>
 	</div>
 
-  
+
 @endsection

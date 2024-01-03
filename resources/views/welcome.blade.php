@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    
+
     <!--NO MODIFICAR-->
     <title>INIFAP C.E. Zacatecas</title>
-    
-     
+
+
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-HXXJYQTXCE"></script>
 		<script>
@@ -24,7 +24,7 @@
 
 <body>
 	<main class="page">
-		
+
 		<nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
     	<div class="container">
         	<div class="navbar-header">
@@ -76,7 +76,7 @@
                 <li class="active">Inifap C.E. Zacatecas</li>
             </ol>
         </div>
-        
+
     	<div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -92,7 +92,7 @@
 
                 <div class="row" style="margin-top:1em;">
                 	<div class="col-md-11">
-                  		 <font style="font-weight:bold; margin-right:0.5em;">Red de Monitoreo Agroclimático del Estado de Zacatecas</font><a href="estaciones.php" ><img src="/images/templatemo_entrar.png"></a>
+                  		 <font style="font-weight:bold; margin-right:0.5em;">Red de Monitoreo Agroclimático del Estado de Zacatecas</font><a href="estaciones.php" ><img src="images/templatemo_entrar.png"></a>
 
                         <div style="margin-top:1em; margin-bottom:1em;">
                             <a href="aplicaciones.php"><button type="button" class="btn btn-success" style="font-size: 16px;">Aplicaciones de la Red de Monitoreo</button></a>
@@ -109,7 +109,7 @@
 		                </div>
                      </div>
                      <div class="col-md-3">
-                     	<a href="estaciones.php" ><img title="Red de Monitoreo Agroclimático del Estado de Zacatecas" src="/images/estacion.png" width="301" height="204"></a>
+                     	<a href="estaciones.php" ><img title="Red de Monitoreo Agroclimático del Estado de Zacatecas" src="images/estacion.png" width="301" height="204"></a>
                      </div>
                 </div>
 
@@ -140,7 +140,7 @@
                 </div>
                 <br>
 
-				
+
 				<!--<div class="panel-group ficha-collapse" id="accordion">
                   <div class="panel panel-default">
                     <div class="panel-heading">
@@ -166,13 +166,13 @@
                 <!--SECCIÓN MODIFICABLE | MENU CONTEXTUAL -->
                 <div class="list-group">
                 	<!--<a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalInfo"><img src="/images/templatemo_list.png" style="margin-right:10px;">Información Importante</a>-->
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="potagricola.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Potencial Productivo Agrícola</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="potforrajero.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Potencial Productivo Forrajero</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionest.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Publicaciones Técnicas</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionesc.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Publicaciones Científicas</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="{{ route('inicio') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Agrocostos</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalDir"><img src="/images/templatemo_list.png" style="margin-right:10px;">Directorio</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalServ"><img src="/images/templatemo_list.png" style="margin-right:10px;">Servicios</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="potagricola.php"><img src="images/templatemo_list.png" style="margin-right:10px;">Potencial Productivo Agrícola</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="potforrajero.php"><img src="images/templatemo_list.png" style="margin-right:10px;">Potencial Productivo Forrajero</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionest.php"><img src="images/templatemo_list.png" style="margin-right:10px;">Publicaciones Técnicas</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionesc.php"><img src="images/templatemo_list.png" style="margin-right:10px;">Publicaciones Científicas</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="{{ route('inicio') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Agrocostos</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalDir"><img src="images/templatemo_list.png" style="margin-right:10px;">Directorio</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalServ"><img src="images/templatemo_list.png" style="margin-right:10px;">Servicios</a>
                 </div>
 
                 <!--SECCIÓN MODIFICABLE | MAPA DE GOOGLE-->
@@ -186,12 +186,12 @@
                     </div>
                 </div>
                 <br>
-                
+
             </div>
         </div>
     </div>
  </main>
- 
+
     <div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -363,7 +363,7 @@
         </div>
       </div>
     </div>
-    
+
 	<script>
 	$gmx(document).ready(function(){
 		$("select").change(function () {
@@ -393,8 +393,8 @@
 		});
 	});
 	</script>
-    
-    
+
+
 			<script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
 		</body>
 

@@ -24,8 +24,8 @@
         </div>
         <div class="col-md-3">
             <div class="list-group">
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('inicio') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Cerrar sesión</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('inicio') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Cerrar sesión</a>
             </div>
         </div>
         </div>
@@ -37,7 +37,7 @@
                     <h4><a href="{{ route('SubirReportes') }}">Ver y modificar reportes</a><br></h4>
                         <h4><a href="{{ route('register') }}">Dar de alta a usuarios</a><br><br></h4>
         </div>
-        </div>   
+        </div>
     </div>
 
 

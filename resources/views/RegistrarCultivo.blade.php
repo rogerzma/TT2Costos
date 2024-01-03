@@ -21,14 +21,14 @@
             <div class="col-md-9">
                 <br><h2>Registrar cultivo</h2>
                 <hr class="red">
-                <h5>Características generales</h5><br> 
+                <h5>Características generales</h5><br>
             </div>
             <div class="col-md-3">
                 <div class="list-group">
-                    <a class="list-group-item" style="text-decoration: none;" href="{{ route('InicioAdministrador') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
-                    <a class="list-group-item" style="text-decoration: none;" href="{{ route('ListaCultivos') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Lista de cultivos</a>
-                    <a class="list-group-item" style="text-decoration: none;" href="{{ route('SubirReportes') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Ver y modificar reportes</a>
-                    <a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarUsuario') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Registrar usuarios</a>
+                    <a class="list-group-item" style="text-decoration: none;" href="{{ route('InicioAdministrador') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+                    <a class="list-group-item" style="text-decoration: none;" href="{{ route('ListaCultivos') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Lista de cultivos</a>
+                    <a class="list-group-item" style="text-decoration: none;" href="{{ route('SubirReportes') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Ver y modificar reportes</a>
+                    <a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarUsuario') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Registrar usuarios</a>
                 </div>
             </div>
         </div>
@@ -87,8 +87,9 @@
         </div>
 
 
-            <br><h5>Preparación del terreno</h5><br>
+            <br><h5>Preparación del terreno</h5>
             <div class="row fila-concepto">
+                <br>
                 <div class="col-md-2 5">
                     <input type="hidden" name="costo[0][concepto]" class="conceptoOriginal" value="Preparación del terreno">
                     <p>Insumo</p>
@@ -114,15 +115,16 @@
             </div>
             <div class="row">
                 <div class="col-md-2 5">
-                    <br> 
+                    <br>
                     <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
                 </div>
             </div>
-    
-    
-        <br><h5>Siembra</h5><br>
+
+
+        <br><h5>Siembra</h5>
 
         <div class="row fila-concepto" >
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[1][concepto]" class="conceptoOriginal" value="Siembra" data-index="1">
                 <p>Insumo</p>
@@ -140,18 +142,19 @@
                 <br><br>
                 <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; color:#ff0000;" onclick="eliminarFila(this)"></span>
             </div>
-          </div>   
+          </div>
           <div class="row">
             <div class="col-md-2 5">
-                <br> 
+                <br>
                 <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
             </div>
         </div>
 
-    
-        <br><h5>Fertilización</h5><br>
+
+        <br><h5>Fertilización</h5>
 
         <div class="row fila-concepto" >
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[2][concepto]" class="conceptoOriginal" value="Fertilización" data-index="2">
                 <p>Insumo</p>
@@ -169,17 +172,18 @@
                 <br><br>
                 <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; color:#ff0000;" onclick="eliminarFila(this)"></span>
             </div>
-          </div>   
+          </div>
           <div class="row">
             <div class="col-md-2 5">
-                <br> 
+                <br>
                 <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
             </div>
         </div>
 
-        <br><h5>Combate de maleza</h5><br>
+        <br><h5>Combate de maleza</h5>
 
         <div class="row fila-concepto" >
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[3][concepto]" class="conceptoOriginal" value="Combate de maleza" data-index="3">
                 <p>Insumo</p>
@@ -197,20 +201,20 @@
                 <br><br>
                 <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; color:#ff0000;" onclick="eliminarFila(this)"></span>
             </div>
-          </div>   
+          </div>
           <div class="row">
             <div class="col-md-2 5">
-                <br> 
+                <br>
                 <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
             </div>
         </div>
 
-    
 
-    <br><h5>Control de plagas</h5><br>
+
+    <br><h5>Control de plagas</h5>
 
         <div class="row fila-concepto">
-
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[4][concepto]" class="conceptoOriginal" value="Control de plagas" data-index="4">
                 <p>Insumo</p>
@@ -228,18 +232,19 @@
                 <br><br>
                 <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; color:#ff0000;" onclick="eliminarFila(this)"></span>
             </div>
-    </div>  
+    </div>
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
-    
 
-    <br><h5>Control de enfermedades</h5><br>
+
+    <br><h5>Control de enfermedades</h5>
 
         <div class="row fila-concepto">
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[5][concepto]" class="conceptoOriginal" value="Control de enfermedades" data-index="5">
                 <p>Insumo</p>
@@ -257,17 +262,18 @@
                 <br><br>
                 <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; color:#ff0000;" onclick="eliminarFila(this)"></span>
             </div>
-    </div>  
+    </div>
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
 
-    <br><h5>Control fitosanitario</h5><br>
+    <br><h5>Control fitosanitario</h5>
 
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[6][concepto]" class="conceptoOriginal" value="Control fitosanitario" data-index="6">
             <p>Insumo</p>
@@ -285,17 +291,17 @@
             <br><br>
             <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; color:#ff0000;" onclick="eliminarFila(this)"></span>
         </div>
-    </div>  
+    </div>
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
 
 
-    <br><h5>Labores culturales</h5><br>
-
+    <br><h5>Labores culturales</h5>
+        <br>
         <div class="row fila-concepto">
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[7][concepto]" class="conceptoOriginal" value="Labores culturales" data-index="6">
@@ -314,17 +320,18 @@
                 <br><br>
                 <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; color:#ff0000;" onclick="eliminarFila(this)"></span>
             </div>
-    </div>  
+    </div>
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
 
-    <br><h5>Labores manuales</h5><br>
+    <br><h5>Labores manuales</h5>
 
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[8][concepto]" class="conceptoOriginal" value="Labores manuales" data-index="8">
             <p>Insumo</p>
@@ -342,17 +349,17 @@
             <br><br>
             <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; color:#ff0000;" onclick="eliminarFila(this)"></span>
         </div>
-</div>  
+</div>
 <div class="row">
     <div class="col-md-2 5">
-        <br> 
+        <br>
         <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
     </div>
 </div>
 
-    <br><h5>Riego y drenaje</h5><br>
-
+    <br><h5>Riego y drenaje</h5>
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[9][concepto]" class="conceptoOriginal" value="Riego y drenaje" data-index="9">
             <p>Insumo</p>
@@ -370,18 +377,19 @@
             <br><br>
             <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; color:#ff0000;" onclick="eliminarFila(this)"></span>
         </div>
-</div>  
+</div>
 <div class="row">
     <div class="col-md-2 5">
-        <br> 
+        <br>
         <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
     </div>
 </div>
 
 
-    <br><h5>Cosecha</h5><br>
+    <br><h5>Cosecha</h5>
 
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[10][concepto]" class="conceptoOriginal" value="Cosecha" data-index="10">
             <p>Insumo</p>
@@ -399,17 +407,18 @@
             <br><br>
             <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; color:#ff0000;" onclick="eliminarFila(this)"></span>
         </div>
-    </div>  
+    </div>
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
 
-    <br><h5>Flete para siembra</h5><br>
+    <br><h5>Flete para siembra</h5>
 
         <div class="row fila-concepto">
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[11][concepto]" class="conceptoOriginal" value="Flete para siembra" data-index="11">
                 <p>Insumo</p>
@@ -427,18 +436,19 @@
                 <br><br>
                 <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; color:#ff0000;" onclick="eliminarFila(this)"></span>
             </div>
-    </div>  
+    </div>
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
 
-    
-    <br><h5>Renta de la tierra</h5><br>
+
+    <br><h5>Renta de la tierra</h5>
 
         <div class="row fila-concepto">
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[12][concepto]" class="conceptoOriginal" value="Renta de la tierra" data-index="12">
                 <p>Insumo</p>
@@ -459,15 +469,16 @@
     </div>
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
 
         </div>
     </div>
 
-    <br><h5>Costos adicionales</h5><br>
+    <br><h5>Costos adicionales</h5>
 
         <div class="row fila-concepto">
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[13][concepto]" class="conceptoOriginal" value="Costos adicionales" data-index="13">
                 <p>Insumo</p>
@@ -488,7 +499,7 @@
     </div>
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
 
         </div>
@@ -510,7 +521,7 @@
     </div><br>
 </form>
     </div>
-</div> 
+</div>
 
 <script type="text/javascript">
     var contadorFilas = 14; // Inicializado a 0
@@ -553,7 +564,7 @@
         var filasMismoConcepto = $('.fila-concepto').filter(function() {
             return $(this).find('.conceptoOriginal').val() === conceptoOriginal;
         });
-        
+
         if (filasMismoConcepto.length > 0) {
             // Si existen filas con el mismo concepto, duplica la última encontrada
             var nuevaFila = filasMismoConcepto.last().clone();
@@ -610,7 +621,7 @@
 
         // Limpia los campos de entrada en la fila duplicada, excepto el botón
         nuevaFila.find("input[type='text']").not(button).val("");
-        
+
 
 
         // Inserta la nueva fila después de la fila original
@@ -641,6 +652,6 @@
         document.getElementById('num_filas_costos').value = contadorFilas; // Actualiza el valor del contador
     }
 
-    
+
 </script>
 @endsection

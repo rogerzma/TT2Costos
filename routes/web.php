@@ -42,9 +42,8 @@ Route::get('/Calculadora', [CalculadoraControlador::class, 'calculadoraDatos'])-
 Route::view('/MapaPotencial', 'MapaPotencial')->name('MapaPotencial');
 Route::view('/pruebaCultivo', 'pruebaCultivo')->name('pruebaCultivo');
 Route::view('/pruebaCultivo2', 'pruebaCultivo2')->name('pruebaCultivo2');
-Route::view('/InicioAdministrador', 'InicioAdministrador')->name('InicioAdministrador');
 Route::view('/welcome', 'welcome')->name('welcome');
-Route::view('/prueba', 'prueba')->name('prueba');
+Route::view('/PruebaCultivo', 'PruebaCultivo')->name('PruebaCultivo');
 Route::get('/filtrado', [ReporteControlador::class, 'getFiltrado'])->name('filtrado');
 Route::get('/CalculadoraResultado', [CalculadoraControlador::class, 'calcularCostos'])->name('CalculadoraResultado');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
@@ -56,6 +55,8 @@ Route::middleware(['auth'])->group(function () {
     Route::view('/RegistrarUsuario', 'RegistrarUsuario')->name('RegistrarUsuario');
     Route::view('/CreaReporte', 'CreaReporte')->name('CreaReporte');
     Route::post('/registrar-usuario', [CustomRegisterController::class, 'registrarUsuario'])->name('registrar.usuario');
+    Route::view('/InicioAdministrador', 'InicioAdministrador')->name('InicioAdministrador');
+
 
 });
 

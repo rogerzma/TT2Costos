@@ -25,14 +25,14 @@
         </div>
         <div class="col-md-3">
             <div class="list-group">
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('welcome') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('Calculadora') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Calculadora</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('MapaPotencial') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Potencial agrícola</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Modo administrador</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('welcome') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('Calculadora') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Calculadora</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('MapaPotencial') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Potencial agrícola</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Modo administrador</a>
             </div>
         </div>
       </div>
-      
+
       <form method="get" action="{{ route('filtrado') }}">
         @csrf
         <div class="row">
@@ -51,7 +51,7 @@
                     <option value="">Todos</option>
                         @foreach($modalidadesUnicas as $modalidad)
                         <option value="{{ $modalidad }}" @if(request('modalidad') == $modalidad) selected @endif>{{ $modalidad }}</option>
-                        @endforeach          
+                        @endforeach
                 </select>
             </div>
           </div>
@@ -114,7 +114,7 @@
                     <tr>
                         <th colspan="6" style="background:#cc6600; color:#FFF;">RIEGO</th>
                     </tr>
-                    
+
                     @foreach ($reportesRiego as $reporte)
                         <tr>
                             <td align="center" valign="middle">
@@ -132,7 +132,7 @@
             <tr>
                 <th colspan="6" style="background:#cc6600; color:#FFF;">Temporal</th>
             </tr>
-            
+
             @foreach ($reportesTemporal as $reporte)
                 <tr>
                     <td align="center" valign="middle">

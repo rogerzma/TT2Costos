@@ -24,10 +24,10 @@
         </div>
         <div class="col-md-3">
             <div class="list-group">
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('inicio') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('inicio') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-                    <button type="submit" class="list-group-item" style="text-decoration: none;"><img src="/images/templatemo_list.png" style="margin-right:10px;">Cerrar sesión</button>
+                    <button type="submit" class="list-group-item" style="text-decoration: none;"><img src="images/templatemo_list.png" style="margin-right:10px;">Cerrar sesión</button>
                 </form>
             </div>
         </div>
@@ -40,7 +40,7 @@
                     <h4><a href="{{ route('SubirReportes') }}">Ver y modificar reportes</a><br></h4>
                         <h4><a href="{{ route('RegistrarUsuario') }}">Dar de alta a usuarios</a><br><br></h4>
         </div>
-        </div>   
+        </div>
     </div>
 
 

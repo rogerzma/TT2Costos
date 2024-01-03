@@ -22,14 +22,14 @@
     <div class="col-md-9">
         <h2>Nuevo reporte</h2>
         <hr class="red">
-        <p>Seleccione las características del reporte a subir.</p> 
+        <p>Seleccione las características del reporte a subir.</p>
     </div>
     <div class="col-md-3">
         <div class="list-group">
-          <a class="list-group-item" style="text-decoration: none;" href="{{ route('InicioAdministrador') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
-					<a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarCultivo') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Registrar cultivo</a>
-					<a class="list-group-item" style="text-decoration: none;" href="{{ route('ListaCultivos') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Visualizar lista de cultivos</a>
-					<a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarUsuario') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Registrar usuarios</a>
+          <a class="list-group-item" style="text-decoration: none;" href="{{ route('InicioAdministrador') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+					<a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarCultivo') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Registrar cultivo</a>
+					<a class="list-group-item" style="text-decoration: none;" href="{{ route('ListaCultivos') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Visualizar lista de cultivos</a>
+					<a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarUsuario') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Registrar usuarios</a>
         </div>
     </div>
     </div>
@@ -38,22 +38,22 @@
       <div class="alert alert-danger" id="emptyFieldsAlert" style="display: none;">
         Campos vacíos
       </div>
-      
+
       <form id="reportForm" action="{{ route('crear.reporte') }}" method="POST" enctype="multipart/form-data">
       @csrf
-       <div class="row"> 
+       <div class="row">
           <div class="col-md-4">
             <p>
               <p><h4>Nombre del cultivo</h4></p>
               <input class="form-control" placeholder="Ingrese el nombre del cultivo" type="text" name="nombrecultivo">
               @error('nombrecultivo')<p class="text text-danger">Falta el nombre</p>@enderror
-            </p></div> 
+            </p></div>
             <div class="col-md-4">
               <p>
                 <p><h4>Nombre científico</h4></p>
                 <input class="form-control" placeholder="Ingrese el nombre científico" type="text" name="nombrecientifico">
                 @error('nombrecientifico')<p class="text text-danger">Falta el nombre cientifico</p>@enderror
-              </p></div> 
+              </p></div>
               <div class="col-md-4">
                 <p>
                   <p><h4>Tipo de cultivo</h4></p>
@@ -63,10 +63,10 @@
                       <option value="Perenne">Perenne</option>
                     </select>
                     @error('tipocultivo')<p class="text text-danger">Falta el tipo de cultivo</p>@enderror
-                </p></div> 
+                </p></div>
        </div>
 
-       <div class="row"> 
+       <div class="row">
             <div class="col-md-4">
               <p>
                 <p><h4>Modalidad</h4></p>
@@ -76,7 +76,7 @@
                     <option value="Temporal">Temporal</option>
                   </select>
                   @error('modalidad')<p class="text text-danger">Falta la modalidad</p>@enderror
-            </p></div> 
+            </p></div>
             <div class="col-md-4">
               <p>
                 <p><h4>Ciclo de cultivo</h4></p>
@@ -92,23 +92,23 @@
                     <option value="Primavera-verano">Temporada de lluvias</option>
                   </select>
                   @error('ciclocultivo')<p class="text text-danger">Falta el ciclo</p>@enderror
-            </p></div> 
-          
+            </p></div>
+
      </div>
 
-     <div class="row"> 
+     <div class="row">
       <div class="col-md-4">
         <p>
           <p><h4>Potencial alto (hec)</h4></p>
           <input class="form-control" placeholder="Ingrese las hectareas de potencial" type="text" name="potencialalto">
           @error('potencialalto')<p class="text text-danger">Falta el potencial</p>@enderror
-        </p></div> 
+        </p></div>
         <div class="col-md-4">
           <p>
             <p><h4>Potencial medio (hec)</h4></p>
             <input class="form-control" placeholder="Ingrese las hectareas de potencial" type="text" name="potencialmedio">
             @error('potencialmedio')<p class="text text-danger">Falta el potencial</p>@enderror
-          </p></div> 
+          </p></div>
           <div class="col-md-4">
             <p>
               <p><h4>Potencial bajo (hec)</h4></p>
@@ -117,7 +117,7 @@
             </p></div>
     </div>
 
-    <div class="row"> 
+    <div class="row">
       <div class="col-md-4">
         <p>
           <p><h4>Seleccione el archivo a subir</h4></p>
@@ -125,10 +125,10 @@
             <input type="file" id="exampleInputFile" name="pdf">
             @error('pdf')<p class="text text-danger">Falta el reporte</p>@enderror
           </div>
-        </p></div> 
+        </p></div>
         <div class="col-md-4">
           <p>
-          </p></div> 
+          </p></div>
           <div class="col-md-4">
             <p>
               <p>
@@ -167,7 +167,7 @@
     $(document).ready(function () {
       $('#validateReportButton').click(function (e) {
         e.preventDefault(); // Evita que el formulario se envíe automáticamente
-        
+
         if (validateForm()) {
           // Si el formulario es válido, continúa con el envío del formulario
           $('#reportForm').submit(); // Envía el formulario
@@ -192,7 +192,7 @@
         // Agrega más validaciones según tus necesidades
 
         // Verifica si algún campo obligatorio está vacío
-        if (nombreCultivo === '' 
+        if (nombreCultivo === ''
         || nombreCientifico === ''
         || tipoCultivo === ''
         || modalidad === ''

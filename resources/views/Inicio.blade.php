@@ -23,25 +23,25 @@
 
                     <!--SECCIÓN MODIFICABLE | MENU CONTEXTUAL -->
                     <div class="list-group">
-                        <a class="list-group-item" style="text-decoration: none;" href="{{ route('welcome') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
-                        <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Modo administrador</a>
+                        <a class="list-group-item" style="text-decoration: none;" href="{{ route('welcome') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+                        <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Modo administrador</a>
                     </div>
                 </div>
                 </div>
-        
+
             <div class="row">
                 <div class="col-md-9">
                     <h4>Descripción</h4>
-                        <p align="justify">Los Agrocostos apoyan y dan certeza a los intermediarios financieros en la toma de decisiones 
+                        <p align="justify">Los Agrocostos apoyan y dan certeza a los intermediarios financieros en la toma de decisiones
                         de CRÉDITO y facilitan la operación de los servicios de fondeo, garantía y apoyos tecnológicos de INIFAP.</p>
                     <h5>Calculadora de costos</h5>
-                        <p align="justify">En el apartado u oprimiendo el botón "Calculadora de costos", el usuario podrá seleccionar el cultivo para realizar su estimación. 
+                        <p align="justify">En el apartado u oprimiendo el botón "Calculadora de costos", el usuario podrá seleccionar el cultivo para realizar su estimación.
                             Permitirá que que el productor realice diferentes estimaciones de costos de los cultivos que desee, así como proyecciones a distintos plazos.</p>
                             <p>
                                 <a href="{{ route('Calculadora') }}" button class="btn btn-default" type="button">Calculadora de costos</a>
                             </p>
                     <h5>Mapa potencial</h5>
-                        <p align="justify">En el apartado "Mapa Potencial", el usuario podrá navegar por un mapa de Zacatecas para saber el potencial agrícola 
+                        <p align="justify">En el apartado "Mapa Potencial", el usuario podrá navegar por un mapa de Zacatecas para saber el potencial agrícola
                             de algún cultivo en ciertas zonas del estado y sus municipios.</p>
                             <p>
                                 <a href="{{ route('MapaPotencial') }}" button class="btn btn-default" type="button">Mapa Potencial</a>
@@ -60,9 +60,9 @@
                                 <canvas id="myChart"></canvas>
                             </div>
                         </div>
-                        
+
                         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
-                        
+
                         <script>
                             const ctx = document.getElementById('myChart').getContext('2d');
                             new Chart(ctx, {

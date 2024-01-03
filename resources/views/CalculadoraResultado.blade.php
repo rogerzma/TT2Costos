@@ -22,19 +22,19 @@
         <div class="col-md-9">
             <h2>Calculadora Agrocostos</h2>
             <hr class="red">
-            <h4>Seleccione las características del cultivo</h4><br> 
-            
+            <h4>Seleccione las características del cultivo</h4><br>
+
         </div>
         <div class="col-md-3">
             <div class="list-group">
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('welcome') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('MapaPotencial') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Mapa de potencial agrícola</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('filtrado') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Reportes</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Modo administrador</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('welcome') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('MapaPotencial') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Mapa de potencial agrícola</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('filtrado') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Reportes</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Modo administrador</a>
             </div>
         </div>
-        
-        
+
+
         </div>
 </div>
 
@@ -147,7 +147,7 @@
                 $totalFinal = 0; // Inicializa la variable del total final
                 $subtotalCultivo = 0; // Inicializa el subtotal para el cultivo actual
             @endphp
-                    
+
                 @foreach ($cultivo->costos->where('concepto', 'Preparación del terreno') as $costo)
                     <tr>
                         <td>{{ $costo->insumo }}</td>
@@ -193,7 +193,7 @@
                 $totalFinal = 0; // Inicializa la variable del total final
                 $subtotalCultivo = 0; // Inicializa el subtotal para el cultivo actual
             @endphp
-                    
+
                 @foreach ($cultivo->costos->where('concepto', 'Siembra') as $costo)
                     <tr>
                         <td>{{ $costo->insumo }}</td>
@@ -239,7 +239,7 @@
                 $totalFinal = 0; // Inicializa la variable del total final
                 $subtotalCultivo = 0; // Inicializa el subtotal para el cultivo actual
             @endphp
-                    
+
                 @foreach ($cultivo->costos->where('concepto', 'Fertilización') as $costo)
                     <tr>
                         <td>{{ $costo->insumo }}</td>
@@ -285,7 +285,7 @@
                 $totalFinal = 0; // Inicializa la variable del total final
                 $subtotalCultivo = 0; // Inicializa el subtotal para el cultivo actual
             @endphp
-                    
+
                 @foreach ($cultivo->costos->where('concepto', 'Combate de maleza') as $costo)
                     <tr>
                         <td>{{ $costo->insumo }}</td>
@@ -331,7 +331,7 @@
                 $totalFinal = 0; // Inicializa la variable del total final
                 $subtotalCultivo = 0; // Inicializa el subtotal para el cultivo actual
             @endphp
-                    
+
                 @foreach ($cultivo->costos->where('concepto', 'Control de plagas') as $costo)
                     <tr>
                         <td>{{ $costo->insumo }}</td>
@@ -377,7 +377,7 @@
                 $totalFinal = 0; // Inicializa la variable del total final
                 $subtotalCultivo = 0; // Inicializa el subtotal para el cultivo actual
             @endphp
-                    
+
                 @foreach ($cultivo->costos->where('concepto', 'Control de enfermedades') as $costo)
                     <tr>
                         <td>{{ $costo->insumo }}</td>
@@ -424,7 +424,7 @@
                 $totalFinal = 0; // Inicializa la variable del total final
                 $subtotalCultivo = 0; // Inicializa el subtotal para el cultivo actual
             @endphp
-                    
+
                 @foreach ($cultivo->costos->where('concepto', 'Control fitosanitario') as $costo)
                     <tr>
                         <td>{{ $costo->insumo }}</td>
@@ -470,7 +470,7 @@
                 $totalFinal = 0; // Inicializa la variable del total final
                 $subtotalCultivo = 0; // Inicializa el subtotal para el cultivo actual
             @endphp
-                    
+
                 @foreach ($cultivo->costos->where('concepto', 'Labores culturales') as $costo)
                     <tr>
                         <td>{{ $costo->insumo }}</td>
@@ -516,7 +516,7 @@
                 $totalFinal = 0; // Inicializa la variable del total final
                 $subtotalCultivo = 0; // Inicializa el subtotal para el cultivo actual
             @endphp
-                    
+
                 @foreach ($cultivo->costos->where('concepto', 'Labores manuales') as $costo)
                     <tr>
                         <td>{{ $costo->insumo }}</td>
@@ -562,7 +562,7 @@
                 $totalFinal = 0; // Inicializa la variable del total final
                 $subtotalCultivo = 0; // Inicializa el subtotal para el cultivo actual
             @endphp
-                    
+
                 @foreach ($cultivo->costos->where('concepto', 'Riego y drenaje') as $costo)
                     <tr>
                         <td>{{ $costo->insumo }}</td>
@@ -609,7 +609,7 @@
                 $totalFinal = 0; // Inicializa la variable del total final
                 $subtotalCultivo = 0; // Inicializa el subtotal para el cultivo actual
             @endphp
-                    
+
                 @foreach ($cultivo->costos->where('concepto', 'Cosecha') as $costo)
                     <tr>
                         <td>{{ $costo->insumo }}</td>
@@ -655,7 +655,7 @@
                 $totalFinal = 0; // Inicializa la variable del total final
                 $subtotalCultivo = 0; // Inicializa el subtotal para el cultivo actual
             @endphp
-                    
+
                 @foreach ($cultivo->costos->where('concepto', 'Flete para siembra') as $costo)
                     <tr>
                         <td>{{ $costo->insumo }}</td>
@@ -701,7 +701,7 @@
                 $totalFinal = 0; // Inicializa la variable del total final
                 $subtotalCultivo = 0; // Inicializa el subtotal para el cultivo actual
             @endphp
-                    
+
                 @foreach ($cultivo->costos->where('concepto', 'Renta de la tierra') as $costo)
                     <tr>
                         <td>{{ $costo->insumo }}</td>
@@ -796,19 +796,19 @@
                 <tr>
                     <td>Ingreso bruto</td>
                     <td>${{ number_format($ingresoBruto, 2) }}</td>
-                </tr>   
+                </tr>
                 <tr>
                     <td>Ingreso neto</td>
                     <td>${{ number_format($ingresoNeto, 2) }}</td>
-                </tr>   
+                </tr>
                 <tr>
                     <td>Relación costo-beneficio ($$MXN)</td>
                     <td>{{ number_format($relacionCostoBeneficio, 2) }}</td>
-                </tr>   
-        </table> 
+                </tr>
+        </table>
     </div>
     </div>
-</div> 
+</div>
 
 
 <div class="container">
@@ -829,7 +829,7 @@
         </div>
         <div class="col-md-4">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalServ">Descargar reporte</button>
-            
+
         </div>
     </div>
 </div>
@@ -867,7 +867,7 @@
                     </div>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                 </div>
-            
+
         </div>
     </form>
     </div>
@@ -880,7 +880,7 @@
             <p>Lo sentimos, no existe información para el cultivo seleccionado</p>
             </div>
         </div>
-    </div> 
+    </div>
   @endif
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -888,16 +888,16 @@
       function descargar() {
           // Guarda el contenido original del botón
           var contenidoOriginal = $('#btnDescargar').html();
-  
+
           // Cambia el contenido del botón a "Cargando"
           $('#btnDescargar').html('<i class="fa fa-spinner fa-spin"></i> Cargando...');
-  
+
           // Deshabilita el botón para evitar clics múltiples
           $('#btnDescargar').prop('disabled', true);
-  
+
           // Envía el formulario para descargar el reporte
           $('#downloadForm').submit();
-  
+
           // Después de un tiempo (puedes ajustar el tiempo según tus necesidades), restaura el contenido del botón
           setTimeout(function () {
               $('#btnDescargar').html(contenidoOriginal);

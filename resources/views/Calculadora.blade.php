@@ -22,19 +22,19 @@
         <div class="col-md-9">
             <h2>Calculadora Agrocostos</h2>
             <hr class="red">
-            <h4>Seleccione las características del cultivo</h4><br> 
-            
+            <h4>Seleccione las características del cultivo</h4><br>
+
         </div>
         <div class="col-md-3">
             <div class="list-group">
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('welcome') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('MapaPotencial') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Mapa de potencial agrícola</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('filtrado') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Reportes</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Modo administrador</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('welcome') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('MapaPotencial') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Mapa de potencial agrícola</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('filtrado') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Reportes</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Modo administrador</a>
             </div>
         </div>
-        
-        
+
+
         </div>
 </div>
 

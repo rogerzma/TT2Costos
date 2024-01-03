@@ -21,14 +21,14 @@
             <div class="col-md-9">
                 <br><h2>Modificar cultivo</h2>
                 <hr class="red">
-                <h5>Características generales</h5><br> 
+                <h5>Características generales</h5><br>
             </div>
             <div class="col-md-3">
                 <div class="list-group">
-                    <a class="list-group-item" style="text-decoration: none;" href="{{ route('InicioAdministrador') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
-                    <a class="list-group-item" style="text-decoration: none;" href="{{ route('ListaCultivos') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Lista de cultivos</a>
-                    <a class="list-group-item" style="text-decoration: none;" href="{{ route('SubirReportes') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Ver y modificar reportes</a>
-                    <a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarUsuario') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Registrar usuarios</a>
+                    <a class="list-group-item" style="text-decoration: none;" href="{{ route('InicioAdministrador') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+                    <a class="list-group-item" style="text-decoration: none;" href="{{ route('ListaCultivos') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Lista de cultivos</a>
+                    <a class="list-group-item" style="text-decoration: none;" href="{{ route('SubirReportes') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Ver y modificar reportes</a>
+                    <a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarUsuario') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Registrar usuarios</a>
                 </div>
             </div>
         </div>
@@ -75,10 +75,11 @@
         </div>
 
 
-            <br><h5>Preparación del terreno</h5><br>
+            <br><h5>Preparación del terreno</h5>
             @foreach($costos as $index => $costo)
             @if($costo->concepto === 'Preparación del terreno')
             <div class="row fila-concepto">
+                <br>
                 <div class="col-md-2 5">
                     <input type="hidden" name="costo[{{ $index }}][concepto]" class="conceptoOriginal" value="Preparación del terreno">
                     <p>Insumo</p>
@@ -105,17 +106,18 @@
             @endforeach
             <div class="row">
                 <div class="col-md-2 5">
-                    <br> 
+                    <br>
                     <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
                 </div>
             </div>
-    
-    
-        <br><h5>Siembra</h5><br>
+
+
+        <br><h5>Siembra</h5>
 
         @foreach($costos as $index => $costo)
             @if($costo->concepto === 'Siembra')
             <div class="row fila-concepto">
+                <br>
                 <div class="col-md-2 5">
                     <input type="hidden" name="costo[{{ $index }}][concepto]" class="conceptoOriginal" value="Siembra">
                     <p>Insumo</p>
@@ -142,17 +144,18 @@
             @endforeach
           <div class="row">
             <div class="col-md-2 5">
-                <br> 
+                <br>
                 <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
             </div>
         </div>
 
-    
-    <br><h5>Fertilización</h5><br>
+
+    <br><h5>Fertilización</h5>
 
     @foreach($costos as $index => $costo)
     @if($costo->concepto === 'Fertilización')
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[{{ $index }}][concepto]" class="conceptoOriginal" value="Fertilización">
             <p>Insumo</p>
@@ -179,17 +182,18 @@
     @endforeach
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
 
-    
-    <br><h5>Combate de maleza</h5><br>
+
+    <br><h5>Combate de maleza</h5>
 
         @foreach($costos as $index => $costo)
         @if($costo->concepto === 'Combate de maleza')
         <div class="row fila-concepto">
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[{{ $index }}][concepto]" class="conceptoOriginal" value="Combate de maleza">
                 <p>Insumo</p>
@@ -216,16 +220,17 @@
         @endforeach
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
 
-    <br><h5>Control de plagas</h5><br>
+    <br><h5>Control de plagas</h5>
 
     @foreach($costos as $index => $costo)
     @if($costo->concepto === 'Control de plagas')
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[{{ $index }}][concepto]" class="conceptoOriginal" value="Control de plagas">
             <p>Insumo</p>
@@ -252,17 +257,19 @@
     @endforeach
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
-    
 
-    <br><h5>Control de enfermedades</h5><br>
+
+    <br><h5>Control de enfermedades</h5>
 
     @foreach($costos as $index => $costo)
+
     @if($costo->concepto === 'Control de enfermedades')
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[{{ $index }}][concepto]" class="conceptoOriginal" value="Control de enfermedades">
             <p>Insumo</p>
@@ -289,16 +296,17 @@
     @endforeach
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
 
-    <br><h5>Control fitosanitario</h5><br>
+    <br><h5>Control fitosanitario</h5>
 
     @foreach($costos as $index => $costo)
     @if($costo->concepto === 'Control fitosanitario')
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[{{ $index }}][concepto]" class="conceptoOriginal" value="Control fitosanitario">
             <p>Insumo</p>
@@ -325,16 +333,17 @@
     @endforeach
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
 
-    <br><h5>Labores culturales</h5><br>
+    <br><h5>Labores culturales</h5>
 
     @foreach($costos as $index => $costo)
     @if($costo->concepto === 'Labores culturales')
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[{{ $index }}][concepto]" class="conceptoOriginal" value="Labores culturales">
             <p>Insumo</p>
@@ -361,16 +370,17 @@
     @endforeach
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
 
-    <br><h5>Labores manuales</h5><br>
+    <br><h5>Labores manuales</h5>
 
     @foreach($costos as $index => $costo)
     @if($costo->concepto === 'Labores manuales')
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[{{ $index }}][concepto]" class="conceptoOriginal" value="Labores manuales">
             <p>Insumo</p>
@@ -397,16 +407,17 @@
     @endforeach
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
 
-    <br><h5>Riego y drenaje</h5><br>
+    <br><h5>Riego y drenaje</h5>
 
     @foreach($costos as $index => $costo)
     @if($costo->concepto === 'Riego y drenaje')
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[{{ $index }}][concepto]" class="conceptoOriginal" value="Riego y drenaje">
             <p>Insumo</p>
@@ -433,7 +444,7 @@
     @endforeach
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
@@ -444,6 +455,7 @@
     @foreach($costos as $index => $costo)
     @if($costo->concepto === 'Cosecha')
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[{{ $index }}][concepto]" class="conceptoOriginal" value="Cosecha">
             <p>Insumo</p>
@@ -470,7 +482,7 @@
     @endforeach
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
 
         </div>
@@ -481,6 +493,7 @@
     @foreach($costos as $index => $costo)
     @if($costo->concepto === 'Flete para siembra')
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[{{ $index }}][concepto]" class="conceptoOriginal" value="Flete para siembra">
             <p>Insumo</p>
@@ -507,17 +520,18 @@
     @endforeach
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
 
-    
-    <br><h5>Renta de la tierra</h5><br>
+
+    <br><h5>Renta de la tierra</h5>
 
     @foreach($costos as $index => $costo)
     @if($costo->concepto === 'Renta de la tierra')
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[{{ $index }}][concepto]" class="conceptoOriginal" value="Renta de la tierra">
             <p>Insumo</p>
@@ -544,16 +558,17 @@
     @endforeach
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
 
-    <br><h5>Costos adicionales</h5><br>
+    <br><h5>Costos adicionales</h5>
 
     @foreach($costos as $index => $costo)
     @if($costo->concepto === 'Costos adicionales')
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[{{ $index }}][concepto]" class="conceptoOriginal" value="Costos adicionales">
             <p>Insumo</p>
@@ -580,7 +595,7 @@
     @endforeach
     <div class="row">
         <div class="col-md-2 5">
-            <br> 
+            <br>
             <button class="btn btn-warning pull-right btn-agregar-costo" type="button">Agregar Costo</button>
         </div>
     </div>
@@ -600,7 +615,7 @@
     </div><br>
 </form>
     </div>
-</div> 
+</div>
 
 <script type="text/javascript">
     var contadorFilas = document.querySelectorAll('.fila-concepto').length;
@@ -639,7 +654,7 @@
         var filasMismoConcepto = $('.fila-concepto').filter(function() {
             return $(this).find('.conceptoOriginal').val() === conceptoOriginal;
         });
-        
+
         if (filasMismoConcepto.length > 0) {
             // Si existen filas con el mismo concepto, duplica la última encontrada
             var nuevaFila = filasMismoConcepto.last().clone();
@@ -666,7 +681,7 @@
 
         // Limpia los campos de entrada en la fila duplicada, excepto el botón
         nuevaFila.find("input[type='text']").not(button).val("");
-        
+
 
         // Inserta la nueva fila después de la fila original
         nuevaFila.insertAfter(filaOriginal);
@@ -696,6 +711,6 @@
         document.getElementById('num_filas_costos').value = contadorFilas; // Actualiza el valor del contador
     }
 
-    
+
 </script>
 @endsection

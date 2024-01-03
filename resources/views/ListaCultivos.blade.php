@@ -23,10 +23,10 @@
         </div>
         <div class="col-md-3">
             <div class="list-group">
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('InicioAdministrador') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarCultivo') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Registrar cultivo</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('SubirReportes') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Ver y modificar reportes</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarUsuario') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Registrar usuarios</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('InicioAdministrador') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarCultivo') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Registrar cultivo</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('SubirReportes') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Ver y modificar reportes</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarUsuario') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Registrar usuarios</a>
             </div>
         </div>
     </div>
@@ -61,11 +61,18 @@
                         </tr>
                     @endforeach
                 </table>
+                <div class="row">
+                    <div class="col-md-4">
+                      <br><p>
+                        <a href="{{ route('Calculadora') }}" button class="btn btn-primary" type="button">Calcuadora</a>
+                    </p>
+                      </div></div>
             @else
                 <p>No hay cultivos registrados en la base de datos.</p>
             @endif
         </div>
     </div>
+
 </div>
 
 
@@ -83,7 +90,7 @@
                 <div class="modal-footer">
                     <form method="POST" action="{{ route('eliminar.cultivo', ['id' => $cultivos->id]) }}">
                         @csrf
-                        @method('DELETE') 
+                        @method('DELETE')
                         <button type="submit" class="btn btn-primary">Eliminar</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                     </form>
