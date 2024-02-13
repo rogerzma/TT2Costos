@@ -36,13 +36,6 @@
 
 
 
-    <div class="container">
-      <form id="reportForm" method="POST" action="{{ route('actualiza.reporte', ['id' => $reporte->id]) }}" enctype="multipart/form-data">
-        @csrf
-        @method('PUT')
-        <input type="hidden" name="id" value="{{ $reporte->id }}">
-        <div class="row">
-          <div class="col-md-4">
             <p>
               <p><h4>Nombre del cultivo</h4></p>
               <input class="form-control" name="nombrecultivo" placeholder="Ingrese el nombre del cultivo" type="text" value="{{ $reporte->nombrecultivo }}">
@@ -63,12 +56,7 @@
                             </option>
                         @endforeach
                     </select>
-                </p>
-            </div>
-       </div>
 
-       <div class="row">
-            <div class="col-md-4">
               <p>
                   <p><h4>Modalidad</h4></p>
                   <select class="form-control" name="modalidad">
@@ -92,12 +80,7 @@
                           </option>
                       @endforeach
                   </select>
-              </p>
-          </div>
-     </div>
 
-     <div class="row">
-      <div class="col-md-4">
         <p>
           <p><h4>Potencial alto (hec)</h4></p>
           <input class="form-control" name="potencialalto" placeholder="Hectareas de potencial" type="text" value="{{ $reporte->potencialalto }}">

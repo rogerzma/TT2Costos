@@ -39,9 +39,7 @@
         Campos vacíos
       </div>
 
-      <form id="reportForm" action="{{ route('crear.reporte') }}" method="POST" enctype="multipart/form-data">
-      @csrf
-       <div class="row">
+
           <div class="col-md-4">
             <p>
               <p><h4>Nombre del cultivo</h4></p>
@@ -62,11 +60,7 @@
                       <option value="Anual">Anual</option>
                       <option value="Perenne">Perenne</option>
                     </select>
-                    @error('tipocultivo')<p class="text text-danger">Falta el tipo de cultivo</p>@enderror
-                </p></div>
-       </div>
 
-       <div class="row">
             <div class="col-md-4">
               <p>
                 <p><h4>Modalidad</h4></p>
@@ -91,12 +85,7 @@
                     <option value="Otoño-invierno">Otoño-primavera</option>
                     <option value="Primavera-verano">Temporada de lluvias</option>
                   </select>
-                  @error('ciclocultivo')<p class="text text-danger">Falta el ciclo</p>@enderror
-            </p></div>
 
-     </div>
-
-     <div class="row">
       <div class="col-md-4">
         <p>
           <p><h4>Potencial alto (hec)</h4></p>

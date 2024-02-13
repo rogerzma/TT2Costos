@@ -99,13 +99,7 @@
                     </span>
                 </div>
             </div>
-                <table class="table table-bordered table-striped" id="reportesTable">
-                    <tr>
-                        <th colspan="2" rowspan=2 style="background:#009933; color:#FFF;">Nombre Común</th>
-                        <th rowspan="2" style="background:#009933; color:#FFF;">Nombre Científico</th>
-                        <th colspan="3" style="background:#009933; color:#FFF;">Potencial</th>
-                    </tr>
-                    <tr>
+
                         <th style="background:#009933; color:#FFF;">Alto</th>
                         <th style="background:#009933; color:#FFF;">Medio</th>
                         <th style="background:#009933; color:#FFF;">Bajo</th>
@@ -113,42 +107,7 @@
                     @if($reportesRiego->count() > 0)
                     <tr>
                         <th colspan="6" style="background:#cc6600; color:#FFF;">RIEGO</th>
-                    </tr>
 
-                    @foreach ($reportesRiego as $reporte)
-                        <tr>
-                            <td align="center" valign="middle">
-                                <a href="{{ route('descargar.pdf', ['id' => $reporte->id]) }}"><img border="0" src="images/PDF.png" /></a>
-                            </td>
-                            <td valign="middle">{{ $reporte->nombrecultivo }}</td>
-                            <td valign="middle"><i>{{ $reporte->nombrecientifico }}</i> L.</td>
-                            <td valign="middle">{{ $reporte->potencialalto }}</td>
-                            <td valign="middle">{{ $reporte->potencialmedio }}</td>
-                            <td valign="middle">{{ $reporte->potencialbajo }}</td>
-                        </tr>
-                    @endforeach
-            @endif
-            @if($reportesTemporal->count() > 0)
-            <tr>
-                <th colspan="6" style="background:#cc6600; color:#FFF;">Temporal</th>
-            </tr>
-
-            @foreach ($reportesTemporal as $reporte)
-                <tr>
-                    <td align="center" valign="middle">
-                        <a href="{{ route('descargar.pdf', ['id' => $reporte->id]) }}"><img border="0" src="images/PDF.png" /></a>
-                    </td>
-                    <td valign="middle">{{ $reporte->nombrecultivo }}</td>
-                    <td valign="middle"><i>{{ $reporte->nombrecientifico }}</i> L.</td>
-                    <td valign="middle">{{ $reporte->potencialalto }}</td>
-                    <td valign="middle">{{ $reporte->potencialmedio }}</td>
-                    <td valign="middle">{{ $reporte->potencialbajo }}</td>
-                </tr>
-            @endforeach
-                </table>
-                @else
-                <p>No existen reportes para los filtros seleccionados.</p>
-            @endif
         </div>
     </div>
 </div>

@@ -22,56 +22,55 @@
         <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
-                     <span class="sr-only">Interruptor de Navegación</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
+                    <span class="sr-only">Interruptor de Navegación</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/"></a>
-                  </div>
-                  <div class="collapse navbar-collapse" id="subenlaces">
+                </div>
+                <div class="collapse navbar-collapse" id="subenlaces">
                     <ul class="nav navbar-nav navbar-right">
                 <li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/articulos">Blog</a></li>
                 <li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/multimedia">Multimedia</a></li>
                 <li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/prensa">
-                      Prensa            </a>
-                  </li>
-                  <li class="landing-btn">
-                          <a href="https://www.gob.mx/inifap/archivo/agenda">
+                    Prensa            </a>
+                </li>
+                <li class="landing-btn">
+                        <a href="https://www.gob.mx/inifap/archivo/agenda">
                         Agenda            </a>
                     </li>
                 <li class="landing-btn">
                         <a href="https://www.gob.mx/inifap/archivo/acciones_y_programas">
-                      Acciones y programas            </a>
-                  </li>
+                    Acciones y programas            </a>
+                </li>
                 <li class="landing-btn">
                         <a href="https://www.gob.mx/inifap/archivo/documentos">
-                      Documentos            </a>
-                  </li>
-                  <li class="landing-btn">
-                          <a href="https://vun.inifap.gob.mx/portalweb/_Transparencia">
+                    Documentos            </a>
+                </li>
+                <li class="landing-btn">
+                        <a href="https://vun.inifap.gob.mx/portalweb/_Transparencia">
                         Transparencia            </a>
                     </li>
                 <li class="landing-btn">
                         <a href="https://www.gob.mx/agricultura/es/#344">
-                      Contacto            </a>
-                  </li>
-                  </ul>
+                    Contacto            </a>
+                </li>
+                </ul>
                 </div>
                 </div>
-              </nav>
-                  
-      
-              <div class="container">
-                  <ol class="breadcrumb top-buffer">
-                      <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a></li>
-                      <li><a href="http://www.gob.mx/inifap">Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias</a></li>
-                      <li><a href="http://www.gob.mx/inifap">Inifap C.E. Zacatecas</a></li>
-                      <li><a href="http://www.gob.mx/inifap">Agrocostos</a></li>
-                      <li class="active">Iniciar sesión</li>
-                  </ol>
-              </div>
+            </nav>
+            
+            <div class="container">
+                <ol class="breadcrumb top-buffer">
+                    <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a></li>
+                    <li><a href="http://www.gob.mx/inifap">Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias</a></li>
+                    <li><a href="http://www.gob.mx/inifap">Inifap C.E. Zacatecas</a></li>
+                    <li><a href="http://www.gob.mx/inifap">Agrocostos</a></li>
+                    <li class="active">Iniciar sesión</li>
+                </ol>
+            </div>
 
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">

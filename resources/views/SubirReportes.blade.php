@@ -25,8 +25,8 @@
     @endif
         <div class="row">
 			<div class="col-md-9">
-			  <h2>Lista de reportes</h2>
-			  <hr class="red">
+			<h2>Lista de reportes</h2>
+			<hr class="red">
 			<p>Aquí se muestran los cultivos registrados para las diferentes operaciones del sistema.</p>
 
 			</div>
@@ -38,27 +38,7 @@
 					<a class="list-group-item" style="text-decoration: none;" href="{{ route('RegistrarUsuario') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Registrar usuarios</a>
 				</div>
 			</div>
-		  </div>
-              <div class="row">
-                <div class="col-md-9 table-responsive" style="margin-bottom:2em;">
-                    <table class="table table-bordered table-striped">
-                        <tr>
-                            <th colspan="2" rowspan=2 style="background:#009933; color:#FFF;">Nombre Común</th>
-                            <th rowspan="2" style="background:#009933; color:#FFF;">Nombre Científico</th>
-                            <th rowspan="2" style="background:#009933; color:#FFF;">Modalidad</th>
-                            <th colspan="3" style="background:#009933; color:#FFF;">Potencial</th>
-                            <th rowspan="2" style="background:#009933; color:#FFF;">Opciones</th>
-                        </tr>
-                        <tr>
-                            <th style="background:#009933; color:#FFF;">Alto</th>
-                            <th style="background:#009933; color:#FFF;">Medio</th>
-                            <th style="background:#009933; color:#FFF;">Bajo</th>
-                        </tr>
 
-                        @foreach($reportes as $reporte)
-                          <tr>
-                              <td align="center" valign="middle">
-                                  <a href="{{ route('descargar.pdf', ['id' => $reporte->id]) }}"><img border="0" src="images/PDF.png" /></a>
                               </td>
                               <td valign="middle">{{ $reporte->nombrecultivo }}</td>
                               <td valign="middle"><i>{{ $reporte->nombrecientifico }}</td>

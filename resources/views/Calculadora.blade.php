@@ -52,53 +52,15 @@
             </select>
         </div>
         <div class="col-md-3">
-            <p><h5>Ciclo de cultivo</h5></p>
-            <select class="form-control" id="ciclo" name="ciclo">
-                <option value="" disabled selected>Seleccione un ciclo de cultivo</option>
-                <option value="Primavera-verano">Primavera-verano</option>
-                <option value="Otoño-invierno">Otoño-invierno</option>
-            </select>
-        </div>
-        <div class="col-md-3">
-            <p><h5>No. de hectáreas</h5></p>
-            <input class="form-control" id="hectareas" name="hectareas" placeholder="Ingrese las hectáreas a calcular" type="text">
-        </div>
-    </div><br>
-    <div class="row">
-        <div class="col-md-3">
-            <p><h5>Modalidad</h5></p>
-            <select class="form-control" id="modalidad" name="modalidad">
-                <option value="" disabled selected>Seleccione la modalidad</option>
-                <option value="Riego">Riego</option>
-                <option value="Temporal">Temporal</option>
-            </select>
-        </div>
-        <div class="col-md-3">
-            <p><h5>Precio por tonelada $ (MXN)</h5></p>
-            <input class="form-control" id="precio_tonelada" name="precio_tonelada" placeholder="Ingrese el precio de cada tonelada" type="text">
+
         </div>
     </div><br>
     <div class="row">
         <div class="col-md-5">
-            <p><h5>Si desea proyectar los costos a futuro, seleccione un año</h5></p>
-            <select class="form-control" id="ano_proyeccion" name="ano_proyeccion">
-                <option value="" disabled selected>Seleccione un año de proyección</option>
-                <option value="ninguno">Ninguno</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-                <option value="2026">2026</option>
-                <option value="2027">2027</option>
-                <option value="2028">2028</option>
-                <option value="2029">2029</option>
-            </select>
+
         </div>
         <div class="col-md-4">
-            <br>
-            <button type="submit" class="btn btn-primary" id="calcularButton">Calcular</button>
-        </div>
-    </form>
-    </div>
-</div><br>
+
 
 </div>
 
