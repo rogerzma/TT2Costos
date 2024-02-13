@@ -5,38 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    
+
     <!--NO MODIFICAR-->
     <title>INIFAP C.E. Zacatecas</title>
-    
-    
+
+
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-HXXJYQTXCE"></script>
-		<script>window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+		<script>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
 
-        gtag('config', 'G-HXXJYQTXCE');
+  			gtag('config', 'G-HXXJYQTXCE');
 		</script>
 			<link rel='stylesheet' type='text/css' href='https://framework-gb.cdn.gob.mx/assets/styles/main.css'>
 		</head>
 
 <body>
 	<main class="page">
-		
+
 		<nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
+    	<div class="container">
+        	<div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
-            <span class="sr-only">Interruptor de Navegación</span>
+             	<span class="sr-only">Interruptor de Navegación</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand" href="/"></a>
-        </div>
-        <div class="collapse navbar-collapse" id="subenlaces">
-            <ul class="nav navbar-nav navbar-right">
+          	</div>
+          	<div class="collapse navbar-collapse" id="subenlaces">
+            	<ul class="nav navbar-nav navbar-right">
 					<li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/articulos">Blog</a></li>
 					<li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/multimedia">Multimedia</a></li>
 					<li class="landing-btn"><a href="https://www.gob.mx/inifap/archivo/prensa">
@@ -62,11 +63,11 @@
 									<a href="https://www.gob.mx/agricultura/es/#344">
 								Contacto            </a>
 						</li>
-					</ul>
+					  </ul>
 					</div>
-				</div>
+				  </div>
 				</nav>
-		<!--NO MODIFICAR-->
+		        <!--NO MODIFICAR-->
         <!--SECCIÓN DINÁMICA PARA DETECCIÓN DE LOCALIZACIÓN A TRAVÉS DE breadcrumb-->
         <div class="container">
             <ol class="breadcrumb top-buffer">
@@ -75,22 +76,23 @@
                 <li class="active">Inifap C.E. Zacatecas</li>
             </ol>
         </div>
-        
-    <div class="container">
+
+    	<div class="container">
         <div class="row">
             <div class="col-md-9">
                 <h2>INIFAP C.E. Zacatecas</h2>
                 <h5>El Campo Experimental Zacatecas (CEZAC) inició sus actividades en el año de 1971 es uno<br>de los 39 campos experimentales estratégicos del INIFAP.</h5>
 				<hr class="red" style="margin-bottom:2em;">
+
                 <div class="row">
                     <div class="col-md-11">
-						<img class="img-responsive img-rounded" style="width: 100%;" src="_images/cezac.JPG">
-                </div>
-            </div>
+						<img class="img-responsive img-rounded" style="width: 100%;" src="images/cezac.png">
+                	</div>
+            	</div>
 
                 <div class="row" style="margin-top:1em;">
-                <div class="col-md-11">
-                <font style="font-weight:bold; margin-right:0.5em;">Red de Monitoreo Agroclimático del Estado de Zacatecas</font><a href="estaciones.php" ><img src="/images/templatemo_entrar.png"></a>
+                	<div class="col-md-11">
+                  		 <font style="font-weight:bold; margin-right:0.5em;">Red de Monitoreo Agroclimático del Estado de Zacatecas</font><a href="estaciones.php" ><img src="images/templatemo_entrar.png"></a>
 
                         <div style="margin-top:1em; margin-bottom:1em;">
                             <a href="aplicaciones.php"><button type="button" class="btn btn-success" style="font-size: 16px;">Aplicaciones de la Red de Monitoreo</button></a>
@@ -101,21 +103,22 @@
                 </div>
 
                 <div class="row" style="margin-top:1em;">
-                <div class="col-md-7">
-                    <div style="text-align: justify;">
-                    Cuenta con 38 estaciones meteorológicas automáticas, cada una está equipada con sensores para medir la temperatura, humedad relativa, precipitación, dirección y velocidad del viento, radiación solar y humedad de la hoja.<br><br>Las mediciones de las condiciones del estado del tiempo se realiza cada 15 minutos.
-		</div>
-                    </div>
-                    <div class="col-md-3">
-                    <a href="estaciones.php" ><img title="Red de Monitoreo Agroclimático del Estado de Zacatecas" src="/images/estacion.png" width="301" height="204"></a>
-                    </div>
+                	 <div class="col-md-7">
+                     	<div style="text-align: justify;">
+                    		Cuenta con 38 estaciones meteorológicas automáticas, cada una está equipada con sensores para medir la temperatura, humedad relativa, precipitación, dirección y velocidad del viento, radiación solar y humedad de la hoja.<br><br>Las mediciones de las condiciones del estado del tiempo se realiza cada 15 minutos.
+		                </div>
+                     </div>
+                     <div class="col-md-3">
+                     	<a href="estaciones.php" ><img title="Red de Monitoreo Agroclimático del Estado de Zacatecas" src="images/estacion.png" width="301" height="204"></a>
+                     </div>
                 </div>
+
 			</div>
 
             <div class="col-md-3">
 				<div class="alert alert-success" role="alert">Contacto:<br>
                 TEL: <strong>55-38-71-87-00</strong>&nbsp;&nbsp;<br>Ext: <strong>82328, 82337 </strong><br><a href="mailto:inifap.zacatecas@inifap.gob.mx; arechiga.delia@inifap.gob.mx">Enviar Correo</a></div>
-				<!--SECCIÓN MODIFICABLE | ACTUALIZACIÓN DE DICHA PÁGINA-->
+				 <!--SECCIÓN MODIFICABLE | ACTUALIZACIÓN DE DICHA PÁGINA-->
                 <div class="table-bordered">
                     <div>
                         <br>
@@ -137,37 +140,39 @@
                 </div>
                 <br>
 
-				
+
 				<!--<div class="panel-group ficha-collapse" id="accordion">
-                <div class="panel panel-default">
+                  <div class="panel panel-default">
                     <div class="panel-heading">
-                    <h4 class="panel-title">
+                      <h4 class="panel-title">
                         <a data-parent="#accordion" data-toggle="collapse" href="#panel-01" aria-expanded="true" aria-controls="panel-01">
                         <img src="/_images/clima.png"><font class="red" style="font-size:1.2em;">Tiempo Real</font>
                         </a>
-                    </h4>
-                    <button type="button" class="collpase-button collapsed" data-parent="#accordion" data-toggle="collapse" href="#panel-01"></button>
+                      </h4>
+                      <button type="button" class="collpase-button collapsed" data-parent="#accordion" data-toggle="collapse" href="#panel-01"></button>
                     </div>
+
                     <div class="panel-collapse collapse" id="panel-01">
-                    <div class="panel-body">
-                    <select class="form-control" id="estaciones">
+                      <!--<div class="panel-body">
+                      	<select class="form-control" id="estaciones">
                                                 </select>
                         <div id="output"></div>
+                      </div>
                     </div>
-                    </div>
-                </div>
+
+                  </div>
                 </div>-->
 
                 <!--SECCIÓN MODIFICABLE | MENU CONTEXTUAL -->
                 <div class="list-group">
-                <!--<a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalInfo"><img src="/images/templatemo_list.png" style="margin-right:10px;">Información Importante</a>-->
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="potagricola.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Potencial Productivo Agrícola</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="potforrajero.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Potencial Productivo Forrajero</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionest.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Publicaciones Técnicas</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionesc.php"><img src="/images/templatemo_list.png" style="margin-right:10px;">Publicaciones Científicas</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="{{ route('inicio') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Agrocostos</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalDir"><img src="/images/templatemo_list.png" style="margin-right:10px;">Directorio</a>
-                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalServ"><img src="/images/templatemo_list.png" style="margin-right:10px;">Servicios</a>
+                	<!--<a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalInfo"><img src="/images/templatemo_list.png" style="margin-right:10px;">Información Importante</a>-->
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="potagricola.php"><img src="images/templatemo_list.png" style="margin-right:10px;">Potencial Productivo Agrícola</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="potforrajero.php"><img src="images/templatemo_list.png" style="margin-right:10px;">Potencial Productivo Forrajero</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionest.php"><img src="images/templatemo_list.png" style="margin-right:10px;">Publicaciones Técnicas</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="publicacionesc.php"><img src="images/templatemo_list.png" style="margin-right:10px;">Publicaciones Científicas</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" href="{{ route('inicio') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Agrocostos</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalDir"><img src="images/templatemo_list.png" style="margin-right:10px;">Directorio</a>
+                    <a class="list-group-item" style="text-decoration: none; cursor:pointer;" data-toggle="modal" data-target="#modalServ"><img src="images/templatemo_list.png" style="margin-right:10px;">Servicios</a>
                 </div>
 
                 <!--SECCIÓN MODIFICABLE | MAPA DE GOOGLE-->
@@ -181,12 +186,12 @@
                     </div>
                 </div>
                 <br>
-                
+
             </div>
         </div>
     </div>
  </main>
- 
+
     <div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -358,7 +363,7 @@
         </div>
       </div>
     </div>
-    
+
 	<script>
 	$gmx(document).ready(function(){
 		$("select").change(function () {
@@ -368,7 +373,7 @@
 				output = selected.val();
 			}
 
-			$('#output').load('climatr.php',{est:output});
+			 $('#output').load('climatr.php',{est:output});
 
 
 			})
@@ -388,8 +393,8 @@
 		});
 	});
 	</script>
-    
-    
+
+
 			<script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
 		</body>
 
