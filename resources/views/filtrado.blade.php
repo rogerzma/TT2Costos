@@ -25,10 +25,10 @@
         </div>
         <div class="col-md-3">
             <div class="list-group">
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('welcome') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('Calculadora') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Calculadora</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('MapaPotencial') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Potencial agrícola</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Modo administrador</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('welcome') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('Calculadora') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Calculadora</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('MapaPotencial') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Potencial agrícola</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Modo administrador</a>
             </div>
         </div>
       </div>
@@ -130,7 +130,7 @@
             @endif
             @if($reportesTemporal->count() > 0)
             <tr>
-                <th colspan="6" style="background:#cc6600; color:#FFF;">Temporal</th>
+                <th colspan="6" style="background:#cc6600; color:#FFF;">TEMPORAL</th>
             </tr>
             
             @foreach ($reportesTemporal as $reporte)
@@ -146,9 +146,10 @@
                 </tr>
             @endforeach
                 </table>
-                @else
-                <p>No existen reportes para los filtros seleccionados.</p>
             @endif
+            @if($reportesTemporal->count() === 0 && $reportesRiego->count() === 0)
+            <p>No existen reportes para los filtros seleccionados.</p>
+        @endif
         </div>
     </div>
 </div>

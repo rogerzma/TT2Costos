@@ -61,11 +61,18 @@
                         </tr>
                     @endforeach
                 </table>
+                <div class="row">
+                    <div class="col-md-4">
+                      <br><p>
+                        <a href="{{ route('Calculadora') }}" button class="btn btn-primary" type="button">Calcuadora</a>
+                    </p>
+                      </div></div>
             @else
                 <p>No hay cultivos registrados en la base de datos.</p>
             @endif
         </div>
     </div>
+
 </div>
 
 

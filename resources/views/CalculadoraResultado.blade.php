@@ -27,10 +27,10 @@
         </div>
         <div class="col-md-3">
             <div class="list-group">
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('welcome') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('MapaPotencial') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Mapa de potencial agrícola</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('filtrado') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Reportes</a>
-                <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="/images/templatemo_list.png" style="margin-right:10px;">Modo administrador</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('welcome') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('MapaPotencial') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Mapa de potencial agrícola</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('filtrado') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Reportes</a>
+                <a class="list-group-item" style="text-decoration: none;" href="{{ route('login') }}"><img src="images/templatemo_list.png" style="margin-right:10px;">Modo administrador</a>
             </div>
         </div>
         
@@ -84,12 +84,13 @@
             <select class="form-control" id="ano_proyeccion" name="ano_proyeccion">
                 <option value="" disabled selected>Seleccione un año de proyección</option>
                 <option value="ninguno" {{ $ano_proyeccion == 'ninguno' ? 'selected' : '' }}>Ninguno</option>
-                <option value="2024" {{ $ano_proyeccion == '2024' ? 'selected' : '' }}>2024</option>
                 <option value="2025" {{ $ano_proyeccion == '2025' ? 'selected' : '' }}>2025</option>
                 <option value="2026" {{ $ano_proyeccion == '2026' ? 'selected' : '' }}>2026</option>
                 <option value="2027" {{ $ano_proyeccion == '2027' ? 'selected' : '' }}>2027</option>
                 <option value="2028" {{ $ano_proyeccion == '2028' ? 'selected' : '' }}>2028</option>
                 <option value="2029" {{ $ano_proyeccion == '2029' ? 'selected' : '' }}>2029</option>
+                <option value="2030" {{ $ano_proyeccion == '2030' ? 'selected' : '' }}>2030</option>
+
             </select>
         </div>
         <div class="col-md-4">

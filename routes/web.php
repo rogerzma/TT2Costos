@@ -46,6 +46,7 @@ Route::view('/InicioAdministrador', 'InicioAdministrador')->name('InicioAdminist
 Route::view('/welcome', 'welcome')->name('welcome');
 Route::view('/prueba', 'prueba')->name('prueba');
 Route::get('/filtrado', [ReporteControlador::class, 'getFiltrado'])->name('filtrado');
+Route::view('/CreaReporte', 'CreaReporte')->name('CreaReporte');
 Route::get('/CalculadoraResultado', [CalculadoraControlador::class, 'calcularCostos'])->name('CalculadoraResultado');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 

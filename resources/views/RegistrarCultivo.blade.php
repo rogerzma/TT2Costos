@@ -87,8 +87,9 @@
         </div>
 
 
-            <br><h5>Preparación del terreno</h5><br>
+            <br><h5>Preparación del terreno</h5>
             <div class="row fila-concepto">
+                <br>
                 <div class="col-md-2 5">
                     <input type="hidden" name="costo[0][concepto]" class="conceptoOriginal" value="Preparación del terreno">
                     <p>Insumo</p>
@@ -120,9 +121,10 @@
             </div>
     
     
-        <br><h5>Siembra</h5><br>
+        <br><h5>Siembra</h5>
 
         <div class="row fila-concepto" >
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[1][concepto]" class="conceptoOriginal" value="Siembra" data-index="1">
                 <p>Insumo</p>
@@ -149,9 +151,10 @@
         </div>
 
     
-        <br><h5>Fertilización</h5><br>
+        <br><h5>Fertilización</h5>
 
         <div class="row fila-concepto" >
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[2][concepto]" class="conceptoOriginal" value="Fertilización" data-index="2">
                 <p>Insumo</p>
@@ -177,9 +180,10 @@
             </div>
         </div>
 
-        <br><h5>Combate de maleza</h5><br>
+        <br><h5>Combate de maleza</h5>
 
         <div class="row fila-concepto" >
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[3][concepto]" class="conceptoOriginal" value="Combate de maleza" data-index="3">
                 <p>Insumo</p>
@@ -207,10 +211,10 @@
 
     
 
-    <br><h5>Control de plagas</h5><br>
+    <br><h5>Control de plagas</h5>
 
         <div class="row fila-concepto">
-
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[4][concepto]" class="conceptoOriginal" value="Control de plagas" data-index="4">
                 <p>Insumo</p>
@@ -237,9 +241,10 @@
     </div>
     
 
-    <br><h5>Control de enfermedades</h5><br>
+    <br><h5>Control de enfermedades</h5>
 
         <div class="row fila-concepto">
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[5][concepto]" class="conceptoOriginal" value="Control de enfermedades" data-index="5">
                 <p>Insumo</p>
@@ -265,9 +270,10 @@
         </div>
     </div>
 
-    <br><h5>Control fitosanitario</h5><br>
+    <br><h5>Control fitosanitario</h5>
 
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[6][concepto]" class="conceptoOriginal" value="Control fitosanitario" data-index="6">
             <p>Insumo</p>
@@ -294,8 +300,8 @@
     </div>
 
 
-    <br><h5>Labores culturales</h5><br>
-
+    <br><h5>Labores culturales</h5>
+        <br>
         <div class="row fila-concepto">
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[7][concepto]" class="conceptoOriginal" value="Labores culturales" data-index="6">
@@ -322,9 +328,10 @@
         </div>
     </div>
 
-    <br><h5>Labores manuales</h5><br>
+    <br><h5>Labores manuales</h5>
 
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[8][concepto]" class="conceptoOriginal" value="Labores manuales" data-index="8">
             <p>Insumo</p>
@@ -350,9 +357,9 @@
     </div>
 </div>
 
-    <br><h5>Riego y drenaje</h5><br>
-
+    <br><h5>Riego y drenaje</h5>
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[9][concepto]" class="conceptoOriginal" value="Riego y drenaje" data-index="9">
             <p>Insumo</p>
@@ -379,9 +386,10 @@
 </div>
 
 
-    <br><h5>Cosecha</h5><br>
+    <br><h5>Cosecha</h5>
 
     <div class="row fila-concepto">
+        <br>
         <div class="col-md-2 5">
             <input type="hidden" name="costo[10][concepto]" class="conceptoOriginal" value="Cosecha" data-index="10">
             <p>Insumo</p>
@@ -407,9 +415,10 @@
         </div>
     </div>
 
-    <br><h5>Flete para siembra</h5><br>
+    <br><h5>Flete para siembra</h5>
 
         <div class="row fila-concepto">
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[11][concepto]" class="conceptoOriginal" value="Flete para siembra" data-index="11">
                 <p>Insumo</p>
@@ -436,9 +445,10 @@
     </div>
 
     
-    <br><h5>Renta de la tierra</h5><br>
+    <br><h5>Renta de la tierra</h5>
 
         <div class="row fila-concepto">
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[12][concepto]" class="conceptoOriginal" value="Renta de la tierra" data-index="12">
                 <p>Insumo</p>
@@ -465,9 +475,10 @@
         </div>
     </div>
 
-    <br><h5>Costos adicionales</h5><br>
+    <br><h5>Costos adicionales</h5>
 
         <div class="row fila-concepto">
+            <br>
             <div class="col-md-2 5">
                 <input type="hidden" name="costo[13][concepto]" class="conceptoOriginal" value="Costos adicionales" data-index="13">
                 <p>Insumo</p>

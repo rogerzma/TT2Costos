@@ -48,7 +48,6 @@ Route::post('/crear-cultivo', [cultivoControlador::class, 'create'])->name('crea
 Route::post('/guardar-cultivo', [cultivoControlador::class, 'store'])->name('guardar.cultivo');
 Route::post('/crear-costo', [cultivoControlador::class, 'createCosto'])->name('crear.costo');
 Route::post('/calcular-costo', [CalculadoraControlador::class, 'index'])->name('calcular.costo');
-Route::post('/registrar-usuario', [CustomRegisterController::class, 'registrarUsuario'])->name('registrar.usuario');
 Route::delete('/eliminar-cultivo/{id}', [cultivoControlador::class, 'delete'])->name('eliminar.cultivo');
 Route::match(['get', 'post'], '/crear-pdf', [CalculadoraControlador::class, 'pdf'])->name('crear.pdf');
 
