@@ -43,7 +43,6 @@ Route::view('/MapaPotencial', 'MapaPotencial')->name('MapaPotencial');
 Route::view('/pruebaCultivo', 'pruebaCultivo')->name('pruebaCultivo');
 Route::view('/pruebaCultivo2', 'pruebaCultivo2')->name('pruebaCultivo2');
 Route::view('/welcome', 'welcome')->name('welcome');
-Route::view('/PruebaCultivo', 'PruebaCultivo')->name('PruebaCultivo');
 Route::get('/filtrado', [ReporteControlador::class, 'getFiltrado'])->name('filtrado');
 Route::get('/CalculadoraResultado', [CalculadoraControlador::class, 'calcularCostos'])->name('CalculadoraResultado');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
