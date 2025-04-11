@@ -53,7 +53,6 @@ Route::middleware(['auth'])->group(function () {
     Route::view('/RegistrarCultivo', 'RegistrarCultivo')->name('RegistrarCultivo');
     Route::view('/RegistrarUsuario', 'RegistrarUsuario')->name('RegistrarUsuario');
     Route::view('/CreaReporte', 'CreaReporte')->name('CreaReporte');
-    Route::post('/registrar-usuario', [CustomRegisterController::class, 'registrarUsuario'])->name('registrar.usuario');
     Route::view('/InicioAdministrador', 'InicioAdministrador')->name('InicioAdministrador');
 
 
